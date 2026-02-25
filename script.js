@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleBtt = () => {
     backToTop.classList.toggle("visible", window.scrollY > 300);
   };
+  toggleBtt(); // Set correct state on page load
   window.addEventListener("scroll", toggleBtt, { passive: true });
   backToTop.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
