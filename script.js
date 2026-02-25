@@ -7,6 +7,37 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  // --- Hamburger menu ---
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const toggleMenu = (force) => {
+    const isOpen =
+      force !== undefined ? force : !hamburger.classList.contains("open");
+    hamburger.classList.toggle("open", isOpen);
+    mobileMenu.classList.toggle("open", isOpen);
+    hamburger.setAttribute("aria-expanded", isOpen);
+    document.body.style.overflow = isOpen ? "hidden" : "";
+  };
+  hamburger.addEventListener("click", () => toggleMenu());
+  // Close when a link inside mobile menu is clicked
+  mobileMenu.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => toggleMenu(false));
+  });
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!navbar.contains(e.target)) toggleMenu(false);
+  });
+
+  // --- Back to top ---
+  const backToTop = document.getElementById("back-to-top");
+  const toggleBtt = () => {
+    backToTop.classList.toggle("visible", window.scrollY > 300);
+  };
+  window.addEventListener("scroll", toggleBtt, { passive: true });
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
   // --- Active nav link on scroll ---
   const sections = document.querySelectorAll("section[id]");
   const navAnchors = document.querySelectorAll(".nav-links a");

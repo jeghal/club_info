@@ -47,9 +47,30 @@
           </a>
           <span class="school-name-badge">الثانوية الإعدادية 6 نونبر</span>
         </div>
-        <!-- Hidden on mobile, visible on desktop -->
+        <!-- Desktop nav links -->
         <ul class="nav-links" id="nav-links">
           <li><a href="#home" class="active">الرئيسية</a></li>
+          <li><a href="#about">عن النادي</a></li>
+          <li><a href="#activities">الأنشطة</a></li>
+          <li><a href="#announcements">الإعلانات</a></li>
+          <li><a href="#resources">الموارد</a></li>
+        </ul>
+        <!-- Hamburger button — mobile only -->
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="فتح القائمة"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <!-- Mobile dropdown menu -->
+      <div class="mobile-menu" id="mobile-menu">
+        <ul>
+          <li><a href="#home">الرئيسية</a></li>
           <li><a href="#about">عن النادي</a></li>
           <li><a href="#activities">الأنشطة</a></li>
           <li><a href="#announcements">الإعلانات</a></li>
@@ -453,6 +474,11 @@
         </p>
       </div>
     </div>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="back-to-top" aria-label="عودة للأعلى">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
   </body>
