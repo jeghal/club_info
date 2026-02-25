@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نادي المعلوميات | Informatics Club</title>
+    <meta
+      name="description"
+      content="الموقع الرسمي لنادي المعلوميات بالثانوية الإعدادية 6 نونبر."
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Background Glow (overflow:hidden so orbs never spill out) -->
+    <div class="bg-glow" aria-hidden="true">
+      <div class="glow-orb orb-1"></div>
+      <div class="glow-orb orb-2"></div>
+      <div class="glow-orb orb-3"></div>
+    </div>
+
+    <!-- ====== NAVBAR ====== -->
+    <nav class="navbar" id="navbar">
+      <div class="container nav-content">
+        <div class="logo-block">
+          <a href="#home" class="logo">
+            <i class="fa-solid fa-code"></i>
+            <span>نادي المعلوميات</span>
+          </a>
+          <span class="school-name-badge">الثانوية الإعدادية 6 نونبر</span>
+        </div>
+        <!-- Hidden on mobile, visible on desktop -->
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="active">الرئيسية</a></li>
+          <li><a href="#about">عن النادي</a></li>
+          <li><a href="#activities">الأنشطة</a></li>
+          <li><a href="#announcements">الإعلانات</a></li>
+          <li><a href="#resources">الموارد</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ====== HERO ====== -->
+      <section id="home" class="hero section">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text reveal">
+              <div class="badge">🚀 موسم 2026/2027</div>
+              <h1 class="hero-title">اكتشف عالم البرمجة<br />والتكنولوجيا</h1>
+              <p class="hero-subtitle">
+                نادي المعلوميات بالثانوية الإعدادية 6 نونبر هو بوابتك لتعلم لغات
+                البرمجة، تصميم المواقع، وتطوير المهارات الرقمية في بيئة تعاونية
+                وممتعة.
+              </p>
+              <div class="hero-actions">
+                <a href="#activities" class="btn btn-primary btn-lg">
+                  استكشف الأنشطة <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <a href="#about" class="btn btn-outline btn-lg">تعرف علينا</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== ABOUT ====== -->
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2>ما هو نادي المعلوميات؟</h2>
+            <div class="separator"></div>
+          </div>
+          <div class="features-grid">
+            <div class="glass-card feature-card reveal">
+              <div class="feature-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <h3>تعلم عملي</h3>
+              <p>
+                نركز على التطبيق العملي وبناء مشاريع حقيقية بدلاً من النظريات
+                فقط.
+              </p>
+            </div>
+            <div class="glass-card feature-card reveal">
+              <div class="feature-icon"><i class="fa-solid fa-users"></i></div>
+              <h3>عمل جماعي</h3>
+              <p>
+                فرص للعمل في فرق وتطوير مهارات التواصل وحل المشكلات مع زملائك.
+              </p>
+            </div>
+            <div class="glass-card feature-card reveal">
+              <div class="feature-icon">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <h3>تفكير إبداعي</h3>
+              <p>تنمية التفكير المنطقي والإبداعي من خلال تحديات ومسابقات.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== ACTIVITIES ====== -->
+      <section id="activities" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2>أنشطة النادي والمجالات</h2>
+            <div class="separator"></div>
+          </div>
+          <div class="activities-grid">
+            <div
+              class="glass-card activity-card reveal"
+              data-modal="modal-scratch"
+            >
+              <div class="activity-img">🎮</div>
+              <div class="activity-content">
+                <span class="activity-tag tag-beginner">المبتدئين</span>
+                <h3>برمجة سكراتش</h3>
+                <p>تعلم البرمجة بطريقة مرئية وممتعة باستخدام سكراتش.</p>
+                <span class="btn-modal"
+                  >اقرأ المزيد <i class="fa-solid fa-arrow-left"></i
+                ></span>
+              </div>
+            </div>
+
+            <div
+              class="glass-card activity-card reveal"
+              data-modal="modal-python"
+            >
+              <div class="activity-img">🐍</div>
+              <div class="activity-content">
+                <span class="activity-tag tag-advanced">متقدم</span>
+                <h3>برمجة بايثون</h3>
+                <p>تعلم لغة بايثون وبناء تطبيقات وسكريبتات احترافية.</p>
+                <span class="btn-modal"
+                  >اقرأ المزيد <i class="fa-solid fa-arrow-left"></i
+                ></span>
+              </div>
+            </div>
+
+            <div class="glass-card activity-card reveal" data-modal="modal-web">
+              <div class="activity-img">🌐</div>
+              <div class="activity-content">
+                <span class="activity-tag tag-all">للجميع</span>
+                <h3>تطوير الويب</h3>
+                <p>بناء مواقع ويب احترافية باستخدام HTML, CSS وJavaScript.</p>
+                <span class="btn-modal"
+                  >اقرأ المزيد <i class="fa-solid fa-arrow-left"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== ANNOUNCEMENTS ====== -->
+      <section id="announcements" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2>الإعلانات والبرامج</h2>
+            <div class="separator"></div>
+          </div>
+          <div class="timeline reveal">
+            <div class="timeline-item">
+              <div class="glass-card timeline-content">
+                <p class="timeline-date">
+                  <i class="fa-regular fa-calendar"></i> 25 فبراير 2026
+                </p>
+                <h3>🎉 أول حصة لنادي المعلوميات</h3>
+                <p>
+                  يسعدنا الإعلان عن انطلاق أولى حصص نادي المعلوميات بتاريخ
+                  <strong>25.02.2026</strong>. موعدنا مع البرمجة والاكتشاف — لا
+                  تفوّت الفرصة!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== RESOURCES ====== -->
+      <section id="resources" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2>موارد تعليمية</h2>
+            <div class="separator"></div>
+          </div>
+          <div class="resources-grid">
+            <div class="glass-card resource-card reveal">
+              <div class="resource-icon">
+                <i class="fa-brands fa-scratch"></i>
+              </div>
+              <h3>Scratch</h3>
+              <p>منصة تفاعلية لتعلم أساسيات البرمجة عبر الألعاب.</p>
+              <a href="https://scratch.mit.edu" target="_blank" rel="noopener"
+                >ابدأ الآن <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+            <div class="glass-card resource-card reveal">
+              <div class="resource-icon">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <h3>Python.org</h3>
+              <p>الموقع الرسمي للغة بايثون مع توثيق شامل لتعلم البرمجة.</p>
+              <a href="https://python.org" target="_blank" rel="noopener"
+                >ابدأ الآن <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+            <div class="glass-card resource-card reveal">
+              <div class="resource-icon">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <h3>MDN Web Docs</h3>
+              <p>
+                المرجع الأشمل لتعلم HTML, CSS وJavaScript من المبتدئين
+                للمحترفين.
+              </p>
+              <a
+                href="https://developer.mozilla.org/ar/"
+                target="_blank"
+                rel="noopener"
+                >ابدأ الآن <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== CONTACT ====== -->
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <h2>تواصل معنا</h2>
+            <div class="separator"></div>
+            <p
+              style="
+                color: var(--muted);
+                margin-top: 0.75rem;
+                font-size: 0.95rem;
+              "
+            >
+              هل لديك استفسار؟ راسلنا وسنرد عليك في أقرب وقت.
+            </p>
+          </div>
+          <div class="contact-container reveal">
+            <form
+              action="https://formsubmit.co/rjeghal@gmail.com"
+              method="POST"
+              class="glass-card contact-form"
+            >
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="#" />
+              <input
+                type="text"
+                name="الاسم"
+                class="input-field"
+                placeholder="الاسم الكامل"
+                required
+              />
+              <input
+                type="email"
+                name="البريد_الإلكتروني"
+                class="input-field"
+                placeholder="البريد الإلكتروني"
+                required
+              />
+              <textarea
+                name="الرسالة"
+                class="input-field"
+                placeholder="رسالتك ..."
+                required
+              ></textarea>
+              <button type="submit" class="btn btn-primary" style="width: 100%">
+                <i class="fa-solid fa-paper-plane"></i> إرسال الرسالة
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <div class="footer-logo">
+              <i class="fa-solid fa-code"></i> نادي المعلوميات
+            </div>
+            <p>
+              نادي المعلوميات بالثانوية الإعدادية 6 نونبر — نصنع المبرمجين
+              المستقبل.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4>روابط سريعة</h4>
+            <ul>
+              <li><a href="#home">الرئيسية</a></li>
+              <li><a href="#about">عن النادي</a></li>
+              <li><a href="#activities">الأنشطة</a></li>
+              <li><a href="#resources">الموارد</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>التواصل</h4>
+            <ul>
+              <li>
+                <i class="fa-solid fa-location-dot"></i> الثانوية الإعدادية 6
+                نونبر
+              </li>
+              <li><i class="fa-solid fa-envelope"></i> rjeghal@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © 2026 نادي المعلوميات — الثانوية الإعدادية 6 نونبر. جميع الحقوق
+            محفوظة.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ====== MODALS ====== -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+
+    <div class="glass-card modal" id="modal-scratch">
+      <button class="close-modal-btn"><i class="fa-solid fa-times"></i></button>
+      <div class="modal-header">
+        <span class="activity-tag tag-beginner modal-tag">المبتدئين</span>
+        <h3>برمجة سكراتش (Scratch)</h3>
+      </div>
+      <div class="modal-body">
+        <p>
+          سكراتش هي لغة برمجة مرئية مصممة للمبتدئين والأطفال، تتيح بناء ألعاب
+          وقصص إلكترونية تفاعلية بطريقة ممتعة.
+        </p>
+        <h4>ما ستتعلمه:</h4>
+        <ul>
+          <li>
+            <i class="fa-solid fa-check text-primary"></i> أساسيات منطق البرمجة
+            والتحكم في الكائنات.
+          </li>
+          <li>
+            <i class="fa-solid fa-check text-primary"></i> بناء قصص وألعاب
+            إلكترونية بسيطة.
+          </li>
+          <li>
+            <i class="fa-solid fa-check text-primary"></i> مفاهيم الحلقات
+            والشروط والمتغيرات.
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <p>
+          <span style="color: var(--muted)">المستوى: مبتدئ</span
+          ><a
+            href="https://scratch.mit.edu"
+            target="_blank"
+            class="btn btn-primary"
+            >ابدأ التعلم <i class="fa-solid fa-arrow-left"></i
+          ></a>
+        </p>
+      </div>
+    </div>
+
+    <div class="glass-card modal" id="modal-python">
+      <button class="close-modal-btn"><i class="fa-solid fa-times"></i></button>
+      <div class="modal-header">
+        <span class="activity-tag tag-advanced modal-tag">متقدم</span>
+        <h3>برمجة بايثون (Python)</h3>
+      </div>
+      <div class="modal-body">
+        <p>
+          بايثون من أكثر لغات البرمجة انتشاراً في العالم، تُستخدم في الذكاء
+          الاصطناعي وتحليل البيانات والويب.
+        </p>
+        <h4>ما ستتعلمه:</h4>
+        <ul>
+          <li>
+            <i class="fa-solid fa-check text-primary"></i> متغيرات، شروط، وحلقات
+            التكرار.
+          </li>
+          <li>
+            <i class="fa-solid fa-check text-primary"></i> الدوال والوحدات
+            الجاهزة.
+          </li>
+          <li>
+            <i class="fa-solid fa-check text-primary"></i> بناء سكريبتات ومشاريع
+            صغيرة.
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <p><span style="color: var(--muted)">المستوى: متقدم</span></p>
+      </div>
+    </div>
+
+    <div class="glass-card modal" id="modal-web">
+      <button class="close-modal-btn"><i class="fa-solid fa-times"></i></button>
+      <div class="modal-header">
+        <span class="activity-tag tag-all modal-tag">للجميع</span>
+        <h3>تطوير الويب</h3>
+      </div>
+      <div class="modal-body">
+        <p>
+          تعلم بناء مواقع الويب من الصفر باستخدام التقنيات الأساسية الثلاث: HTML
+          لهيكل الصفحة، CSS للتصميم، وJavaScript للتفاعلية.
+        </p>
+        <h4>ما ستتعلمه:</h4>
+        <ul>
+          <li>
+            <i class="fa-solid fa-check text-primary"></i> هيكلة الصفحات بـ
+            HTML5.
+          </li>
+          <li>
+            <i class="fa-solid fa-check text-primary"></i> التصميم والتنسيق بـ
+            CSS3.
+          </li>
+          <li>
+            <i class="fa-solid fa-check text-primary"></i> إضافة التفاعلية بـ
+            JavaScript.
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <p>
+          <span style="color: var(--muted)">المستوى: للجميع</span
+          ><a
+            href="https://developer.mozilla.org/ar/"
+            target="_blank"
+            class="btn btn-primary"
+            >ابدأ التعلم <i class="fa-solid fa-arrow-left"></i
+          ></a>
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
