@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 2 – Les déplacements et les coordonnées</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Floating Print Button -->
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        Les déplacements et les coordonnées
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 2 • Durée : 1h30
+      </p>
+    </header>
+
+    <div class="container">
+      <!-- Objectifs Card -->
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">🎯</div>
+          <h2>Objectifs pédagogiques</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>Comprendre le repère (x ; y) dans Scratch</li>
+            <li>Se déplacer avec précision</li>
+          </ul>
+          <ul class="custom-list">
+            <li>Différencier déplacement relatif et absolu</li>
+            <li>Utiliser les blocs de mouvement efficacement</li>
+          </ul>
+        </div>
+      </main>
+
+      <!-- Déroulement Card -->
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <!-- Step 1 -->
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. Rappel rapide</h3>
+              <span class="badge">10 min</span>
+            </div>
+            <div class="step-content">
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>Qu’est-ce qu’un programme ?</li>
+                <li>Qu’est-ce qu’un sprite ?</li>
+                <li>Quel bloc permet de démarrer un programme ?</li>
+              </ul>
+              <div class="callout">
+                <span class="emoji">♻️</span>
+                <div>
+                  <strong>Petit exercice :</strong><br />
+                  Refaire l’animation de la séance 1.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Découverte du repère Scratch</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p><strong>La scène fonctionne avec des coordonnées :</strong></p>
+              <div class="grid-2" style="margin-top: 1rem">
+                <ul class="custom-list">
+                  <li><strong>Centre :</strong> (0 ; 0)</li>
+                  <li><strong>Droite :</strong> x positif</li>
+                  <li><strong>Gauche :</strong> x négatif</li>
+                </ul>
+                <ul class="custom-list">
+                  <li><strong>Haut :</strong> y positif</li>
+                  <li><strong>Bas :</strong> y négatif</li>
+                </ul>
+              </div>
+              <p
+                style="
+                  margin-top: 1rem;
+                  font-style: italic;
+                  color: var(--text-muted);
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                "
+              >
+                <span>👀</span> Faire afficher la position du sprite et déplacer
+                manuellement le chat pour observer les valeurs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. Activité guidée : déplacement précis</h3>
+              <span class="badge">25 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>Objectif :</strong> Placer le sprite à des positions
+                précises.
+              </p>
+
+              <div class="code-block">
+                <span class="event">Quand 🚩 est cliqué</span><br />
+                <span class="motion">Aller à x:</span>
+                <span class="value">0</span> <span class="motion">y:</span>
+                <span class="value">0</span><br />
+                <span class="motion">Glisser en</span>
+                <span class="value">2</span>
+                <span class="motion">secondes à x:</span>
+                <span class="value">150</span> <span class="motion">y:</span>
+                <span class="value">100</span><br />
+                <span class="motion">Glisser en</span>
+                <span class="value">1</span>
+                <span class="motion">secondes à x:</span>
+                <span class="value">-150</span> <span class="motion">y:</span>
+                <span class="value">-100</span>
+              </div>
+
+              <div
+                class="callout"
+                style="
+                  border-color: var(--scratch-yellow);
+                  background: rgba(255, 213, 0, 0.08);
+                  color: #8a6d3b;
+                "
+              >
+                <span class="emoji">⚖️</span>
+                <div>
+                  <strong>Comparer :</strong><br />
+                  "Avancer de 100 pas" (déplacement <em>relatif</em>)<br />
+                  "Aller à x: ... y: ..." (déplacement <em>absolu</em>)<br />
+                  👉 <em>Discussion : quelle est la différence ?</em>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Activité principale : tracer un carré</h3>
+              <span class="badge">25 min</span>
+            </div>
+            <div class="step-content">
+              <p><strong>Les élèves doivent programmer :</strong></p>
+              <div class="grid-2" style="margin-top: 0.8rem">
+                <ul class="custom-list">
+                  <li>Avancer de 100 pas</li>
+                  <li>Tourner de 90°</li>
+                </ul>
+                <ul class="custom-list">
+                  <li>Répéter 4 fois</li>
+                </ul>
+              </div>
+
+              <div
+                class="small-card"
+                style="margin-top: 1.5rem; padding: 1.5rem"
+              >
+                <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem">
+                  ✨ Variante plus avancée
+                </h4>
+                <p style="font-weight: 600; color: var(--text-main)">
+                  Utiliser l'extension "Stylo" pour dessiner réellement le carré
+                  sur la scène.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>5. Défi rapide</h3>
+              <span class="badge">10 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong
+                  >Créer un parcours en forme de rectangle ou de
+                  triangle.</strong
+                >
+              </p>
+              <p style="margin-top: 0.8rem">Contraintes imposées :</p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>Utiliser au moins une boucle ("Répéter")</li>
+                <li>Position de départ fixée par des coordonnées</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <p
+            style="
+              font-size: 0.9rem;
+              color: var(--text-muted);
+              margin-top: -10px;
+              margin-bottom: 15px;
+              font-style: italic;
+            "
+          >
+            (À copier dans le cahier par les élèves)
+          </p>
+          <ul class="custom-list">
+            <li>
+              La scène Scratch fonctionne avec un
+              <strong>repère (x ; y)</strong>.
+            </li>
+            <li>
+              Un déplacement est <strong>relatif</strong> s'il dépend de la
+              position actuelle ("avancer").
+            </li>
+            <li>
+              Un déplacement est <strong>absolu</strong> s'il vise un point
+              précis ("aller à").
+            </li>
+            <li>
+              Les <strong>boucles</strong> évitent de répéter les mêmes blocs
+              plusieurs fois.
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>Se repérer dans un plan</li>
+              <li>Organiser des instructions</li>
+              <li>Optimiser un programme</li>
+              <li>Tester et corriger</li>
+            </ul>
+          </div>
+          <div class="small-card" style="height: auto">
+            <h4>🏠 Prolongement (Maison)</h4>
+            <p style="margin-bottom: 0.5rem; font-size: 0.95rem">
+              Créer une figure géométrique au choix :
+            </p>
+            <ul class="custom-list">
+              <li>Triangle</li>
+              <li>Étoile simple</li>
+              <li>Rectangle</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+      <script src="script.js"></script>
+</body>
+</html>

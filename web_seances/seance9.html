@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Séance 9 – Projet Libre CV/Passion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()" title="Imprimer la fiche pédagogique">🖨️</button>
+
+    <header class="hero">
+        <h1 class="fade-in" style="animation-delay: 0.1s;">Projet Libre - Création Totale</h1>
+        <p class="fade-in" style="animation-delay: 0.2s;">Séance 9 • Projet Final (Durée : 1h30)</p>
+    </header>
+
+    <div class="container">
+        
+        <main class="card fade-in" style="animation-delay: 0.3s;">
+            <div class="card-header">
+                <div class="icon">🚀</div>
+                <h2>Objectifs du Projet Final</h2>
+            </div>
+            <div class="grid-2">
+                <ul class="custom-list">
+                    <li>Démarrer de Zéro (Un dossier vide `MonSite`, un fichier `index.html` vide, etc...).</li>
+                    <li>Établir un "Wireframe" (Plan d'architecte) sur du papier avant de coder.</li>
+                </ul>
+                <ul class="custom-list">
+                    <li>Construire une Navbar Supérieure (`<header>`).</li>
+                    <li>Créer une section Héros (Une image énorme avec le Titre).</li>
+                    <li>Utiliser les Flexbox pour un damier de photos en dessous.</li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="card fade-in" style="animation-delay: 0.4s;">
+            <div class="card-header">
+                <div class="icon">🕒</div>
+                <h2>Déroulement de la séance</h2>
+            </div>
+            
+            <div class="timeline">
+                
+                <div class="timeline-step">
+                    <div class="step-header">
+                        <h3>1. Design & Plan (Wireframe)</h3>
+                        <span class="badge">15 min</span>
+                    </div>
+                    <div class="step-content">
+                        <p><strong>Cahier des charges : CV Numérique, ou Site Vitrine Passion (ex: Site du Club d'Echecs, ou fan de One Piece).</strong></p>
+                        <ul class="custom-list" style="margin-top: 0.8rem;">
+                            <li>Où se trouveront les images ?</li>
+                            <li>Quelles couleurs principales vont-ils choisir dans le <code>style.css</code> ?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-header">
+                        <h3>2. Le Squelette et les fondations</h3>
+                        <span class="badge">20 min</span>
+                    </div>
+                    <div class="step-content">
+                        <p style="font-size: 1.1rem;">🎯 <strong>L'Objectif :</strong> Recopier mentalement l'anatomie HTML.</p>
+                        <div class="code-block" style="margin-top: 10px;">
+                            <span style="color:#6A9955; font-style:italic;">&lt;!-- L'astuce VS Code "Émmet" : Taper un point d'exclamation ! et Touche Tabulation (Tab). Tout s'écrit ! --&gt;</span>
+                            <br><br>
+                            <span class="c-tag">&lt;header&gt;</span><span class="c-tag">&lt;/header&gt;</span><br>
+                            <span class="c-tag">&lt;main&gt;</span><span class="c-tag">&lt;/main&gt;</span><br>
+                            <span class="c-tag">&lt;footer&gt;</span><span class="c-tag">&lt;/footer&gt;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-header">
+                        <h3>3. Remplissage Intensif (Code)</h3>
+                        <span class="badge">40 min</span>
+                    </div>
+                    <div class="step-content">
+                        <p>Le professeur passe d'élève en élève pour du Débogage (Fautes de frappe, CSS mal écrit, Image qui dépasse de l'écran, etc.).</p>
+                        <ul class="custom-list" style="margin-top: 0.8rem;">
+                            <li>Mise en garde : "Avez-vous bien mis l'image dans le même dossier que le fichier .html pour que ça fonctionne ?"</li>
+                            <li>"Avez-vous bien ajouté `<link rel="stylesheet" ...>` au milieu des `<head>` ?"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-header">
+                        <h3>4. Sauvegarde Pré-Déploiement</h3>
+                        <span class="badge">15 min</span>
+                    </div>
+                    <div class="step-content">
+                        <p>Nettoyage complet. Vérification des fautes d'orthographe (Textes, Noms d'images...). Mettre ce projet très propre dans un "Nouveau Dossier" sur le bureau, prêt pour le Cours n°10.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer / Trace écrite -->
+        <div class="grid-2 fade-in" style="animation-delay: 0.5s;">
+            <div class="small-card">
+                <h4>📝 Trace écrite</h4>
+                <ul class="custom-list">
+                    <li>La création commence "toujours" par les blocs vides avant d'y intégrer le texte ou les éléments visuels réels.</li>
+                    <li>S'habituer impérativement au raccourci clavier de rafraîchissement d'onglet rapide (<kbd>F5</kbd> ou <kbd>Ctrl+R</kbd>).</li>
+                </ul>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 2rem;">
+                <div class="small-card" style="height: auto;">
+                    <h4>🎓 Compétences travaillées</h4>
+                    <ul class="custom-list">
+                        <li>Autonomie Complète !</li>
+                        <li>Gestion de l'architecture d'un dossier et des ressources ("Assets").</li>
+                        <li>Application sémantique HTML5 Header/Main/Footer.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

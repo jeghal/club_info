@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programme Scratch - 10 Séances</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+      .menu-card {
+        background: var(--card-bg);
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .menu-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--scratch-blue);
+        box-shadow: 0 10px 25px rgba(76, 151, 255, 0.2);
+      }
+      .menu-card h3 {
+        color: var(--scratch-blue);
+        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .menu-card p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+      }
+      .menu-card .badge {
+        align-self: flex-start;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        Programme complet Scratch
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        10 séances d'initiation à la programmation
+      </p>
+    </header>
+
+    <div class="container fade-in" style="animation-delay: 0.3s">
+      <main class="card">
+        <div class="card-header">
+          <div class="icon">📚</div>
+          <h2>Progression des 10 séances</h2>
+        </div>
+
+        <div class="menu-grid">
+          <a href="seance1.html" class="menu-card">
+            <div>
+              <h3><span>🟢</span> 1. Découverte</h3>
+              <p>
+                Interface, premier programme, mouvement et bulle de dialogue.
+              </p>
+            </div>
+            <span class="badge">1h30</span>
+          </a>
+
+          <a href="seance2.html" class="menu-card">
+            <div>
+              <h3><span>📐</span> 2. Les coordonnées</h3>
+              <p>
+                Le repère (x ; y), les déplacements absolus/relatifs et les
+                premières boucles.
+              </p>
+            </div>
+            <span class="badge">1h30</span>
+          </a>
+
+          <a href="seance3.html" class="menu-card">
+            <div>
+              <h3><span>🎭</span> 3. L'apparence et l'animation</h3>
+              <p>
+                Changer de costume, gérer le temps d'attente, animer fluide.
+              </p>
+            </div>
+            <span class="badge">1h30</span>
+          </a>
+
+          <a href="seance4.html" class="menu-card">
+            <div>
+              <h3><span>⌨️</span> 4. Interaction clavier</h3>
+              <p>
+                Contrôler son personnage avec les flèches directionnelles,
+                ajouter des événements.
+              </p>
+            </div>
+            <span class="badge">1h30</span>
+          </a>
+
+          <a href="seance5.html" class="menu-card">
+            <div>
+              <h3><span>🎯</span> 5. Conditions et Capteurs</h3>
+              <p>
+                Les blocs "Si... alors", la détection des couleurs et des
+                collisions.
+              </p>
+            </div>
+            <span class="badge">1h30</span>
+          </a>
+
+          <a href="seance6.html" class="menu-card">
+            <div>
+              <h3><span>🔢</span> 6. Les Variables</h3>
+              <p>
+                Créer un système de score, utiliser les données, ajouter des
+                compteurs.
+              </p>
+            </div>
+            <span class="badge">1h30</span>
+          </a>
+
+          <a href="seance7.html" class="menu-card">
+            <div>
+              <h3><span>✉️</span> 7. Messages et Synchronisation</h3>
+              <p>
+                Faire communiquer les sprites entre eux via les événements
+                temporels.
+              </p>
+            </div>
+            <span class="badge">1h30</span>
+          </a>
+
+          <a href="seance8.html" class="menu-card">
+            <div>
+              <h3><span>🎲</span> 8. Aléatoire et Opérateurs</h3>
+              <p>
+                Générer des nombres au hasard, calculer, et pimenter les jeux.
+              </p>
+            </div>
+            <span class="badge">1h30</span>
+          </a>
+
+          <a href="seance9.html" class="menu-card">
+            <div>
+              <h3><span>🧩</span> 9. Mini-jeu (Partie 1)</h3>
+              <p>
+                Projet final : cahier des charges, scène principale,
+                déplacements de base.
+              </p>
+            </div>
+            <span class="badge">1h30</span>
+          </a>
+
+          <a href="seance10.html" class="menu-card">
+            <div>
+              <h3><span>🏆</span> 10. Mini-jeu (Partie 2)</h3>
+              <p>
+                Projet final : conditions de victoire/défaite, finitions,
+                présentation !
+              </p>
+            </div>
+            <span class="badge">1h30</span>
+          </a>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

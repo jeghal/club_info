@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 10 – Finalisation & Déploiement Vrai Web</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        Finalisation & Déploiement
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 10 • Certification Finale (Durée : 1h30)
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">🌍</div>
+          <h2>Objectifs Finaux</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>
+              Rendre son code Web "Public" aux yeux du monde Entier (Il était en
+              local `C:/Documents` jusque-là).
+            </li>
+            <li>
+              Comprendre les principes du Cloud Computing basique (Hébergeur,
+              Serveur, Nom de domaine).
+            </li>
+          </ul>
+          <ul class="custom-list">
+            <li>
+              S'inscrire sur GitHub ou Netlify et y "Glisser/Déposer" son
+              dossier.
+            </li>
+            <li>
+              Réceptionner une VRAIE adresse Internet (URL) pour son projet et
+              l'envoyer à ses proches.
+            </li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. Les derniers coups de peinture</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Relecture et retouches de la Maquette sur grand et petit écran
+                de l'ordinateur de salle de classe.
+              </p>
+              <p style="font-size: 1.1rem; color: #e44d26">
+                <strong>RAPPEL CRUCIAL :</strong> Le fichier "Accueil" d'un site
+                DOIT s'appeler <code>index.html</code> (En minuscules absolues),
+                sinon les serveurs américains refuseront de le lire !
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Cloud & Hébergement (L'Infrastructure)</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>C'est quoi "être sur internet" ? : </strong> C'est
+                exactement comme avoir le fichier sur son ordinateur qu'on ne
+                débranche jamais, et d'accepter que le monde entier accède à ce
+                dossier avec l'adresse IP de votre machine.
+              </p>
+              <p>
+                Au lieu de laisser notre PC allumé H24, on l'envoie chez des
+                méga-locataires "Amazon AWS", "Google Cloud", ou ici "GitHub
+                Pages/Netlify Drop".
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. L'Arrivée de la Magie (Netlify/GitHub)</h3>
+              <span class="badge">35 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Il existe pléthore d'hébergeurs gratuits sans "Commandes Console
+                (Git)". <strong>Netlify Drop</strong> par exemple :
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>Les élèves y créent un rapide compte.</li>
+                <li>
+                  Ils prennent "physiquement" (Drag-and-Drop) leur dossier
+                  "MonSite" qui contient index.html et style.css, et le glissent
+                  sur la fenêtre de Chrome / Netlify.
+                </li>
+                <li>
+                  10 secondes de sablier... Netlify vous donne un lien type
+                  <em>`https://mon-cv.netlify.app`</em>.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Partage de l'URL & Restitution.</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Tous les élèves se passent leurs adresses IP (ou URL
+                temporaires). Ouverture simultanée des sites sur les PC de la
+                salle et visionnage du portfolio de l'année de l'Informatics
+                Club.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Bilan Final</h4>
+          <ul class="custom-list">
+            <li>
+              Internet repose avant tout sur l'harmonie des technologies (<span
+                class="c-tag"
+                >HTML</span
+              >
+              <span class="c-prop">CSS</span>
+              <span style="color: #dcdcaa">JS</span>).
+            </li>
+            <li>
+              Un <strong>Serveur</strong> est juste un "ordinateur ami" très
+              puissant ouvert sur l'extérieur. L'Adresse Web pointe vers les
+              fichiers qu'il contient.
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div
+            class="small-card"
+            style="
+              height: auto;
+              background: linear-gradient(
+                135deg,
+                var(--web-orange) 0%,
+                var(--web-blue) 100%
+              );
+              color: #fff;
+              border: none;
+            "
+          >
+            <h4 style="color: #f0db4f">🎓 Développeur Web Junior</h4>
+            <p
+              style="
+                font-size: 1.1rem;
+                font-weight: 800;
+                text-align: center;
+                margin-top: 10px;
+              "
+            >
+              Bravo ! Votre premier pont numérique sur le Web 3.0 officiel. 💻
+            </p>
+            <p
+              style="
+                text-align: center;
+                font-size: 0.9rem;
+                margin-top: 5px;
+                color: #eee;
+              "
+            >
+              Vous êtes la nouvelle architecture du 21e siècle.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

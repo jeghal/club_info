@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 3 – Les Conditions (Si... Sinon)</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">Les Conditions</h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 3 • Durée : 1h30
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">🚦</div>
+          <h2>Objectifs pédagogiques</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>Créer une bifurcation logique dans le code (If / Else)</li>
+            <li>Utiliser les opérateurs de comparaison (==, &gt;, &lt;, !=)</li>
+          </ul>
+          <ul class="custom-list">
+            <li>
+              Comprendre la notion vitale d'"Indentation" (les espaces) en
+              Python
+            </li>
+            <li>Gérer des conditions multiples avec "Elif"</li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. L'Intelligence de l'ordinateur</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Pour le moment, nos programmes vont tout droit (ligne 1, ligne
+                2, ligne 3...). On veut qu'ils prennent des décisions en
+                fonction d'une réponse !
+              </p>
+              <p>
+                <strong>Rappel Scratch :</strong> C'est le bloc jaune avec "Si
+                ... Alors ... Sinon".
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. "Si" (If) et l'Indentation</h3>
+              <span class="badge">25 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>Le secret de Python :</strong> Pas d'accolades, juste
+                des espaces (Tabulations) !
+              </p>
+              <div class="python-code">
+                age = <span class="py-func">int</span>(<span class="py-func"
+                  >input</span
+                >(<span class="py-string">"Ton âge ? "</span>))<br /><br />
+                <span class="py-keyword">if</span> age >=
+                <span class="py-num">18</span>:<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="py-func">print</span>(<span
+                  class="py-string"
+                  >"Tu es Majeur !"</span
+                >)
+                <span class="py-comment"># Indentation = appartient au IF</span
+                ><br />
+                <span class="py-func">print</span>(<span class="py-string"
+                  >"Fin du programme."</span
+                >)
+                <span class="py-comment"
+                  ># N'a pas d'espace = extérieur au IF</span
+                >
+              </div>
+              <p style="font-style: italic; color: #666; font-size: 0.9rem">
+                Attention au caractère Deux-points "<strong>:</strong>"
+                obligatoire en fin de ligne du "if".
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. "Sinon" (Else) et les Opérateurs</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Que fait-on dans le cas contraire ? Le mot clé de repli est
+                <code>else:</code>.
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>
+                  <code>==</code> (Est exactement égal à) : NE PAS CONFONDRE
+                  AVEC "=" .
+                </li>
+                <li><code>!=</code> (Est différent de)</li>
+                <li>
+                  <code>></code>, <code><</code>, <code>>=</code>,
+                  <code><=</code>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Défi : "Le Videur Intransigeant" ou "Mot de passe"</h3>
+              <span class="badge">30 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Consignes :</strong> Créer l'entrée d'un système top
+                secret.
+              </p>
+              <div class="python-code">
+                mdp = <span class="py-func">input</span>(<span class="py-string"
+                  >"Quel est le mot de passe secret ? "</span
+                >)<br />
+                <span class="py-keyword">if</span> mdp ==
+                <span class="py-string">"dragon"</span>:<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="py-func">print</span>(<span
+                  class="py-string"
+                  >"Accès autorisé !"</span
+                >)<br />
+                <span class="py-keyword">elif</span> mdp ==
+                <span class="py-string">"admin"</span>:
+                <span class="py-comment"># Elif = "Sinon Si"</span><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="py-func">print</span>(<span
+                  class="py-string"
+                  >"Bonjour Administrateur !"</span
+                >)<br />
+                <span class="py-keyword">else</span>:<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="py-func">print</span>(<span
+                  class="py-string"
+                  >"Alarme ! Code erroné !"</span
+                >)
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <ul class="custom-list">
+            <li>
+              <span class="py-keyword">if</span> (Si),
+              <span class="py-keyword">elif</span> (Sinon Si),
+              <span class="py-keyword">else</span> (Sinon) dirigent le
+              programme.
+            </li>
+            <li>
+              Ne jamais oublier les deux points (<strong>:</strong>) à la fin de
+              ces lignes.
+            </li>
+            <li>
+              L'<strong>Indentation</strong> (décalage vers la droite) indique
+              l'intérieur du bloc conditionnel. Si le texte est aligné à gauche,
+              il n'en fait plus partie.
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>Logique booléenne et opérateurs de comparaisons</li>
+              <li>Rigueur syntaxique (Indentation, Deux-points)</li>
+              <li>Contrôle de flux d'un programme textuel</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

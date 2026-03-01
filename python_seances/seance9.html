@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 9 – Projet Final (RP/Texte) - Partie 1</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        Projet Libre – Partie 1
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 9 • Projet Final (Durée : 1h30)
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">🧩</div>
+          <h2>Objectifs du Projet Final</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>
+              Mobiliser toutes les connaissances (Variables, listes, Conditions,
+              Boucles)
+            </li>
+            <li>
+              Concevoir la "Core-Loop" (Boucle centrale) d'un petit jeu textuel
+              (Zork, MUD)
+            </li>
+          </ul>
+          <ul class="custom-list">
+            <li>
+              Gérer un "Personnage Joueur" virtuel avec des scores de Santé ou
+              d'Attaque (Géré par variables).
+            </li>
+            <li>Dessiner l'arborescence des actions possibles sur papier.</li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. Design et Récit (Sur papier)</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong
+                  >Cahier des charges : Le Jeu de Rôle Textuel (RPG)</strong
+                >
+              </p>
+              <p>
+                On demande au joueur : Nom ? Classe (Guerrier, Mage) ? Dans
+                quelle salle vas-tu (Droite/Gauche) ?
+              </p>
+              <p>
+                Les élèves créent les bifurcations et le but (Tuer le dragon,
+                Fuir la forêt...) sur un brouillon (Logigramme).
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Variables "Joueur" et Interface Textuelle</h3>
+              <span class="badge">25 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>L'Objectif :</strong> Initialiser les paramètres du
+                jeu en haut de fichier.
+              </p>
+              <div class="python-code">
+                pv_max = <span class="py-num">100</span><br />
+                pv = pv_max<br />
+                inventaire = []<br /><br />
+
+                nom = <span class="py-func">input</span>(<span class="py-string"
+                  >"Aventurier, quel est ton nom ? "</span
+                >)<br />
+                <span class="py-func">print</span>(<span class="py-string"
+                  >"=== Bienvenue "</span
+                >
+                + nom +
+                <span class="py-string">" dans le Donjon Noir ==="</span>)
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. La Boucle "Jeu en cours"</h3>
+              <span class="badge">40 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Mettre en place la Boucle "Tant que le joueur n'est pas mort" ou
+                n'a pas gagné.
+              </p>
+              <div class="python-code">
+                <span class="py-keyword">while</span> pv &gt;
+                <span class="py-num">0</span>:<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;action =
+                <span class="py-func">input</span>(<span class="py-string"
+                  >"\nQue fais-tu ? 1: Fouiller, 2: Fuir -> "</span
+                >)<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="py-keyword">if</span>
+                action == <span class="py-string">"1"</span>:<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                  class="py-func"
+                  >print</span
+                >(<span class="py-string"
+                  >"Tu trouves une petite pièce d'or."</span
+                >)<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inventaire.<span
+                  class="py-func"
+                  >append</span
+                >(<span class="py-string">"Or"</span>)<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="py-keyword">elif</span>
+                action == <span class="py-string">"2"</span>:<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                  class="py-func"
+                  >print</span
+                >(<span class="py-string"
+                  >"Tu fuis comme un lâche... et tu te cognes (-10 pv)"</span
+                >)<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pv = pv -
+                <span class="py-num">10</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Détecter les blocages (Test Alpha)</h3>
+              <span class="badge">10 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                L'élève vérifie lui-même son code. A-t-il oublié les deux points
+                <code>:</code> ? Y a-t-il des problèmes d'indentation causés par
+                les "if / elif" dans la boucle "while" ?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <ul class="custom-list">
+            <li>
+              La <strong>Core-Loop</strong> textuelle dépend toujours d'un
+              <span class="py-keyword">while</span> encadrant les
+              <span class="py-keyword">if</span> et l'<span class="py-func"
+                >input()</span
+              >
+              de décision.
+            </li>
+            <li>
+              Un code propre commence par toutes les Variables en haut, et la
+              boucle "Jeu" en dessous.
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>Indentation multi-niveaux (Espaces)</li>
+              <li>Gestion de l'intégrité du statut Player</li>
+              <li>Analyse Logigramme du parcours utilisateur</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 4 – La Boucle While (Tant Que)</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">La Boucle While</h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 4 • Durée : 1h30
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">🔁</div>
+          <h2>Objectifs pédagogiques</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>Répéter une action du code en boucle</li>
+            <li>Utiliser <code>while</code> (Tant Que) avec une condition</li>
+          </ul>
+          <ul class="custom-list">
+            <li>Créer une boucle infinie volontaire et savoir l'arrêter</li>
+            <li>
+              Apprendre le mot-clé <code>break</code> pour casser la boucle
+            </li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. Problématique : La Répétition</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Imaginons qu'on veuille compter de 1 à 10. Doit-on réécrire 10
+                fois `print()` ? Et si on veut aller à 1000 ?
+              </p>
+              <p>
+                <strong>Rappel Scratch :</strong> C'est le bloc orange "Répéter
+                jusqu'à ce que..."
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. "Tant Que" (While)</h3>
+              <span class="badge">25 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>Le secret :</strong> Combiner Variable + Répétition.
+              </p>
+              <div class="python-code">
+                compteur = <span class="py-num">1</span><br /><br />
+                <span class="py-keyword">while</span> compteur <=
+                <span class="py-num">5</span>:
+                <span class="py-comment"
+                  ># Tant que compteur est inférieur ou égal à 5</span
+                ><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="py-func">print</span>(<span
+                  class="py-string"
+                  >"Tour numéro "</span
+                >
+                + <span class="py-func">str</span>(compteur))<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;compteur = compteur +
+                <span class="py-num">1</span>
+                <span class="py-comment"># Très Important !</span><br /><br />
+                <span class="py-func">print</span>(<span class="py-string"
+                  >"La boucle est finie."</span
+                >)
+              </div>
+              <p style="font-style: italic; color: #666; font-size: 0.9rem">
+                Attention : Si on oublie "compteur = compteur + 1", le compteur
+                restera à 1. La boucle ne s'arrêtera jamais ! C'est ce qu'on
+                appelle la Boucle Infinie (Crash).
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. Le bouton d'arrêt d'urgence : Break</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Parfois on crée une boucle "Infinie" volontairement (ex: l'écran
+                d'un jeu vidéo tourne toujours), et on s'échappe
+                (<strong>break</strong>) avec un mot secret.
+              </p>
+              <div class="python-code">
+                <span class="py-keyword">while</span>
+                <span class="py-num">True</span>:
+                <span class="py-comment"># Boucle indéfiniment (Vrai)</span
+                ><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;reponse =
+                <span class="py-func">input</span>(<span class="py-string"
+                  >"Dis stop pour arrêter : "</span
+                >)<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="py-keyword">if</span>
+                reponse == <span class="py-string">"stop"</span>:<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                  class="py-keyword"
+                  >break</span
+                >
+                <span class="py-comment"># Casse la boucle While !</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Défi : "Le Jeu du + ou -"</h3>
+              <span class="badge">30 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Consignes :</strong> C'est le moment de créer son
+                premier vrai jeu interactif complet.
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>
+                  L'ordinateur connait un nombre secret (ex: `secret = 42`).
+                </li>
+                <li>
+                  Tant que l'utilisateur n'a pas trouvé (`while guess !=
+                  secret`), l'ordinateur lui redemande un nombre (`input`).
+                </li>
+                <li>
+                  Si c'est trop petit (<code>&lt;</code>), on affiche "C'est
+                  plus !".
+                </li>
+                <li>
+                  Si c'est trop grand (<code>&gt;</code>), on affiche "C'est
+                  moins !".
+                </li>
+                <li>À la fin de la boucle, un grand "Bravo !"</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <ul class="custom-list">
+            <li>
+              La boucle <span class="py-keyword">while</span> (Tant que) exécute
+              le texte en dessous (indenté) tant que sa condition de départ est
+              VRAIE.
+            </li>
+            <li>
+              S'il n'y a rien dans la boucle qui modifie la condition, la boucle
+              devient "Infinie" et le programme plante.
+            </li>
+            <li>
+              Le mot <span class="py-keyword">break</span> sert à quitter la
+              boucle de force.
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>Concept d'itération et de répétition conditionnelle</li>
+              <li>Analyse et prévention des boucles infinies (Sécurité)</li>
+              <li>Création de la "Core Loop" d'un jeu basique</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

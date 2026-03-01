@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 1 – Découverte de Python</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        Découverte de Python
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 1 • Durée : 1h30
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">🎯</div>
+          <h2>Objectifs pédagogiques</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>Découvrir l'interpréteur Python (Console / IDE)</li>
+            <li>Écrire sa première ligne de code : le "Hello World"</li>
+          </ul>
+          <ul class="custom-list">
+            <li>Comprendre que l'ordinateur est une grosse calculatrice</li>
+            <li>Savoir lire et comprendre un message d'erreur (Bug)</li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. Introduction au Texte vs Blocs</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Discussion :</strong> Qu'est-ce que Python ? Pourquoi
+                passer de Scratch (blocs) au texte ?
+              </p>
+              <p>
+                Dans Scratch, on emboîte des legos. En Python, on écrit de vrais
+                "mots magiques". L'avantage : c'est infini et utilisé par les
+                vrais ingénieurs (Netflix, Instagram, NASA).
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Le fameux "Hello World"</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>Objectif :</strong> Faire parler l'ordinateur à
+                l'écran.
+              </p>
+              <p>
+                Ouverture de l'éditeur Python (ex: Thonny, Atelier Python ou
+                IDLE).
+              </p>
+              <div class="python-code">
+                <span class="py-comment"
+                  ># Ceci est un commentaire, l'ordinateur l'ignore</span
+                ><br />
+                <span class="py-func">print</span>(<span class="py-string"
+                  >"Bonjour le monde !"</span
+                >)
+              </div>
+              <p style="font-style: italic; color: #666; font-size: 0.9rem">
+                Attention : Si on oublie un guillemet ou une parenthèse, Python
+                plante ! L'orthographe est reine.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. L'ordinateur calculatrice (+, -, *, /)</h3>
+              <span class="badge">30 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                On peut demander à Python de résoudre nos devoirs de maths !
+              </p>
+              <div class="python-code">
+                <span class="py-func">print</span>(<span class="py-num">5</span>
+                + <span class="py-num">5</span>)<br />
+                <span class="py-func">print</span>(<span class="py-num"
+                  >10</span
+                >
+                * <span class="py-num">2</span>)
+                <span class="py-comment"># L'étoile sert pour multiplier</span>
+              </div>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>
+                  <strong>Défi :</strong> Combien font 5283 multiplié par 812 ?
+                  Demandez à Python !
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. L'Art des Erreurs (Débogage)</h3>
+              <span class="badge">25 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Activité :</strong> Le professeur projette un code faux
+                au tableau et les élèves doivent trouver l'erreur.
+              </p>
+              <div class="python-code">
+                <span class="py-func">print</span>(<span class="py-string"
+                  >"Oups je n'ai pas fermé le guillemet...</span
+                >) <span class="py-comment"># SyntaxError</span>
+              </div>
+              <p>
+                Apprendre à ne pas avoir peur du rouge dans la console. Une
+                erreur est juste Python qui dit : "Je n'ai pas compris".
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <ul class="custom-list">
+            <li>
+              La commande <span class="py-func">print()</span> sert à afficher
+              du texte ou le résultat d'un calcul à l'écran.
+            </li>
+            <li>
+              Le texte doit toujours être encadré de guillemets
+              <span class="py-string">" "</span> ou d'apostrophes
+              <span class="py-string">' '</span>.
+            </li>
+            <li>
+              Les erreurs de <strong>Syntaxe</strong> (SyntaxError) arrivent si
+              on oublie une parenthèse ou un guillemet.
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>
+                Découverte de la logique textuelle (case-sensitive, ponctuation)
+              </li>
+              <li>Interaction de base avec la console</li>
+              <li>Opérateurs mathématiques virtuels</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

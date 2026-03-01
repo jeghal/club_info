@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Séance 6 – Alignement avec Flexbox</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()" title="Imprimer la fiche pédagogique">🖨️</button>
+
+    <header class="hero">
+        <h1 class="fade-in" style="animation-delay: 0.1s;">L'Empire Flexbox (Alignement)</h1>
+        <p class="fade-in" style="animation-delay: 0.2s;">Séance 6 • Durée : 1h30</p>
+    </header>
+
+    <div class="container">
+        
+        <main class="card fade-in" style="animation-delay: 0.3s;">
+            <div class="card-header">
+                <div class="icon">📐</div>
+                <h2>Objectifs pédagogiques</h2>
+            </div>
+            <div class="grid-2">
+                <ul class="custom-list">
+                    <li>Détruire le mur vertical invisible. Apprendre la Disposition moderne du Web (Plus de tableaux ou "float").</li>
+                    <li>Assouplir les éléments côte à côte comme une file d'attente (Direction).</li>
+                </ul>
+                <ul class="custom-list">
+                    <li>Jouer avec `justify-content` (Alignement X).</li>
+                    <li>Jouer avec `align-items` (Alignement Y).</li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="card fade-in" style="animation-delay: 0.4s;">
+            <div class="card-header">
+                <div class="icon">🕒</div>
+                <h2>Déroulement de la séance</h2>
+            </div>
+            
+            <div class="timeline">
+                
+                <div class="timeline-step">
+                    <div class="step-header">
+                        <h3>1. Le Parent (Conteneur) et ses Enfants</h3>
+                        <span class="badge">15 min</span>
+                    </div>
+                    <div class="step-content">
+                        <p><strong>Rappel structure :</strong> Flexbox est une relation Parent/Enfant.</p>
+                        <p>Le sortilège CSS `display: flex;` s'invoque TOUJOURS sur le récipient (Le `div` parent, ou `ul`) et réorganise *magiquement* tous les blocs (`div`, `li`) juste en dessous de lui, côte à côte au lieu d'en dessous !</p>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-header">
+                        <h3>2. Le Mot de pouvoir : display: flex;</h3>
+                        <span class="badge">25 min</span>
+                    </div>
+                    <div class="step-content">
+                        <p style="font-size: 1.1rem;">🎯 <strong>L'Objectif :</strong> "Range-toi en ligne".</p>
+                        <div class="code-block" style="margin-top: 10px;">
+                            <span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-str">"ligne"</span><span class="c-tag">&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-tag">&lt;div&gt;</span><span class="c-str">Bloc 1</span><span class="c-tag">&lt;/div&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-tag">&lt;div&gt;</span><span class="c-str">Bloc 2</span><span class="c-tag">&lt;/div&gt;</span><br>
+                            <span class="c-tag">&lt;/div&gt;</span>
+                            <br><br>
+                            <span class="c-attr">.ligne</span> { <span class="c-prop">display</span>: <span class="c-val">flex</span>; }
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-header">
+                        <h3>3. Écarter et Centrer</h3>
+                        <span class="badge">20 min</span>
+                    </div>
+                    <div class="step-content">
+                        <p>Mettre `flex` c'est le début. Comment écarter ses Blocs 1 et 2 aux bouts ou les centrer parfaitement ?</p>
+                        <ul class="custom-list" style="margin-top: 0.8rem;">
+                            <li><code>justify-content: center;</code> : Rassemble tout au milieu.</li>
+                            <li><code>justify-content: space-between;</code> : Le saint Graal. Pousse le premier élément tout à gauche et le dernier tout à droite. (Idéal pour des barres de Menu "Logo... Liens").</li>
+                            <li><code>gap: 20px;</code> : Rajoute 20px de respiration entre chaque membre de la file sans se mordre les queues.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-header">
+                        <h3>4. Défi "La Navbar Pro"</h3>
+                        <span class="badge">30 min</span>
+                    </div>
+                    <div class="step-content">
+                        <p><strong>Consignes :</strong> Finis les menus verticaux tristes !</p>
+                        <ul class="custom-list" style="margin-top: 0.8rem;">
+                            <li>Ouvrir le projet de la dernière fois, qui contient des `<ul>` en colonne basique.</li>
+                            <li>Entourer de `<nav class="menu-haut">`.</li>
+                            <li>Passer `.menu-haut` en `display: flex; justify-content: space-between; align-items: center;`.</li>
+                            <li>Faire de même avec le parent `ul` pour que les `li` se mettent en ligne et utiliser `gap: 15px;`.</li>
+                            <li>Admirer le miracle d'une file parfaitement de niveau 🤯 !</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer / Trace écrite -->
+        <div class="grid-2 fade-in" style="animation-delay: 0.5s;">
+            <div class="small-card">
+                <h4>📝 Trace écrite</h4>
+                <ul class="custom-list">
+                    <li><span class="c-prop">display: flex;</span> change la matrice par défaut du HTML ("Tous les blocs en dessous") pour "Tous les blocs sur mon axe primaire (en ligne)". (Flex-direction: row, par défaut).</li>
+                    <li>On ne met JAMAIS Flex sur les éléments qu'on veut bouger (les Enfants). On l'applique au conteneur invisible (Le Parent !).</li>
+                </ul>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 2rem;">
+                <div class="small-card" style="height: auto;">
+                    <h4>🎓 Compétences travaillées</h4>
+                    <ul class="custom-list">
+                        <li>Standard Industriel : Remplacement total de l'ancien Float Web 2.0.</li>
+                        <li>Gestion de l'espace positif et négatif (Space-X).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

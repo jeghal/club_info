@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 5 – Conditions et Capteurs</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        Conditions et Capteurs
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 5 • Durée : 1h30
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">🎯</div>
+          <h2>Objectifs pédagogiques</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>Utiliser le bloc conditionnel "Si ... Alors"</li>
+            <li>Détecter la collision avec un autre Sprite</li>
+          </ul>
+          <ul class="custom-list">
+            <li>Détecter une couleur sur la Scène</li>
+            <li>Créer un jeu de type Labyrinthe</li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. La condition au cœur de l'informatique</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Discussion :</strong> La notion de condition.
+                <em>"S'il pleut dehors, alors je prends un parapluie"</em>.
+              </p>
+              <p>
+                Observer la forme des blocs conditionnels dans Scratch : ils ont
+                des "trous en forme de pointe" (hexagones).
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>
+                  Où trouve-t-on les hexagones dans Scratch ? (Catégorie
+                  Capteurs bleu clair).
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Création du labyrinthe (dessin)</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p><strong>Préparation du jeu :</strong></p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>
+                  Dessiner un labyrinthe simple dans les Arrière-plans (Des murs
+                  épais d'une seule couleur, ex: Noir).
+                </li>
+                <li>Réduire la taille du Sprite du joueur (ex: Chat à 30%).</li>
+                <li>
+                  Ajouter un objet de fin de parcours (ex: une Clé d'or, ou une
+                  Pomme).
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. Activité guidée : Ne pas toucher les murs</h3>
+              <span class="badge">35 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>Objectif :</strong> Si le personnage touche le mur
+                noir, il retourne au départ !
+              </p>
+
+              <div class="code-block">
+                <span class="event">Quand 🚩 est cliqué</span><br />
+                <span class="motion">Aller à x:</span>
+                <span class="value">-200</span> <span class="motion">y:</span>
+                <span class="value">150</span>
+                <i style="color: var(--text-muted); font-size: 12px"
+                  >(Point de départ)</i
+                ><br />
+                <span class="event">Répéter indéfiniment</span>
+                <div style="padding-left: 20px">
+                  <i style="color: var(--text-muted); font-size: 12px"
+                    >(Ici on met les blocs de mouvements vus Séance 4)</i
+                  ><br /><br />
+                  <span class="event">Si</span>
+                  <span class="looks">couleur [NOIR] touchée ?</span>
+                  <span class="event">alors</span>
+                  <div style="padding-left: 20px">
+                    <span class="looks">Dire</span>
+                    <span class="value">Aïe !</span>
+                    <span class="looks">pendant</span>
+                    <span class="value">1</span>
+                    <span class="looks">secondes</span><br />
+                    <span class="motion">Aller à x:</span>
+                    <span class="value">-200</span>
+                    <span class="motion">y:</span>
+                    <span class="value">150</span>
+                    <i style="color: var(--text-muted); font-size: 12px"
+                      >(Retour Départ)</i
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Validation de la victoire</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Ajouter une condition supplémentaire :</strong> Le
+                joueur arrive à l'objet de fin.
+              </p>
+              <div class="code-block" style="margin-top: 10px">
+                <span class="event">Si</span>
+                <span class="looks">touchant [Clé] ?</span>
+                <span class="event">alors</span>
+                <div style="padding-left: 20px">
+                  <span class="looks">Dire</span>
+                  <span class="value">C'est gagné !</span>
+                  <span class="looks">pendant</span>
+                  <span class="value">2</span>
+                  <span class="looks">secondes</span><br />
+                  <span class="event">Stop tout</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <ul class="custom-list">
+            <li>
+              La boucle "<strong>Répéter indéfiniment</strong>" permet de
+              vérifier une condition tout au long du jeu.
+            </li>
+            <li>
+              Un <strong>Capteur</strong> (bloc hexagonal) renvoie vrai ou faux.
+            </li>
+            <li>
+              "<strong>Si... Alors...</strong>" est un bloc de contrôle qui
+              obéit au capteur qui est glissé dedans.
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>Logique booléenne (Vrai / Faux)</li>
+              <li>Gestion de la boucle de gameplay (Game Loop)</li>
+              <li>Création de règles et obstacles (Design de Labyrinthe)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+      <script src="script.js"></script>
+</body>
+</html>

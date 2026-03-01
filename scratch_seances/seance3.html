@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 3 – L'apparence et l'animation</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        L'apparence et l'animation
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 3 • Durée : 1h30
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">🎯</div>
+          <h2>Objectifs pédagogiques</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>Comprendre la notion de "costume" pour un sprite</li>
+            <li>Maîtriser le bloc d'attente pour ralentir un programme</li>
+          </ul>
+          <ul class="custom-list">
+            <li>Créer l'illusion du mouvement avec une animation</li>
+            <li>Créer un changement de décor (Arrière-plan)</li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. Rappel de la Séance 2</h3>
+              <span class="badge">10 min</span>
+            </div>
+            <div class="step-content">
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>Quelle est la différence entre "Avancer" et "Aller à" ?</li>
+                <li>À quoi servent les coordonnées X et Y ?</li>
+                <li>Pourquoi utilise-t-on une boucle ?</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Découverte des costumes et décors</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Introduction théorique :</strong> Comment le cinéma
+                d'animation fonctionne-t-il ? (Sucession d'images fixes très
+                rapides).
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>Fouiller dans l'onglet "Costumes" du Chat.</li>
+                <li>
+                  Ajouter un nouveau "Sprite" (ex: Ours, Chauve-souris) qui a
+                  plusieurs costumes.
+                </li>
+                <li>Observer le menu des Arrière-plans de la Scène.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. Activité guidée : Le personnage marche</h3>
+              <span class="badge">30 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>Objectif :</strong> Faire avancer un sprite tout en
+                l'animant.
+              </p>
+
+              <div class="code-block">
+                <span class="event">Quand 🚩 est cliqué</span><br />
+                <span class="event">Répéter indéfiniment</span>
+                <div style="padding-left: 20px">
+                  <span class="looks">Costume suivant</span><br />
+                  <span class="motion">Avancer de</span>
+                  <span class="value">10</span><br />
+                  <span class="event">Attendre</span>
+                  <span class="value">0.2</span>
+                  <span class="event">secondes</span><br />
+                  <span class="motion">Rebondir si le bord est atteint</span>
+                </div>
+              </div>
+
+              <div
+                class="callout"
+                style="
+                  border-color: var(--scratch-yellow);
+                  background: rgba(255, 213, 0, 0.08);
+                  color: #8a6d3b;
+                "
+              >
+                <span class="emoji">⏱️</span>
+                <div>
+                  <strong>L'importance du bloc "Attendre" :</strong><br />
+                  Demander aux élèves de l'enlever pour voir ce qu'il se passe.
+                  L'ordinateur calcule trop vite ! Le bloc permet de ralentir
+                  l'animation pour l’œil humain.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Défi créatif libre</h3>
+              <span class="badge">30 min</span>
+            </div>
+            <div class="step-content">
+              <p><strong>Les élèves doivent :</strong></p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>
+                  Choisir un nouveau Sprite (ex: Pompier, Danseur, Chien).
+                </li>
+                <li>Ajouter 2 arrière-plans différents.</li>
+                <li>
+                  Programmer : "Quand la touche ESPACE est pressée, passer à
+                  l'arrière-plan suivant".
+                </li>
+                <li>Animer le sprite de leur choix (fluidement).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <ul class="custom-list">
+            <li>
+              Un effet d'<strong>animation</strong> est créé en changeant de
+              <strong>costume</strong> très rapidement.
+            </li>
+            <li>
+              Le bloc d'attente contrôle la vitesse de cette animation (le
+              rythme).
+            </li>
+            <li>
+              L'arrière-plan (la scène) peut être programmé avec la catégorie
+              Apparence.
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>Gérer l'apparence visuelle d'un programme</li>
+              <li>Contrôler la boucle et le temps</li>
+              <li>Susciter la créativité avec les décors</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+      <script src="script.js"></script>
+</body>
+</html>

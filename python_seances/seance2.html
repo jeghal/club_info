@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 2 – Variables et Types de données</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">Variables et Types</h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 2 • Durée : 1h30
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">📦</div>
+          <h2>Objectifs pédagogiques</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>
+              Comprendre ce qu'est une variable (Une boîte avec une étiquette)
+            </li>
+            <li>Affecter des valeurs (Nombres ou Texte) à une variable</li>
+          </ul>
+          <ul class="custom-list">
+            <li>Concaténer (coller) du texte et des variables</li>
+            <li>
+              Demander des informations à l'utilisateur avec la commande
+              'input()'
+            </li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. Concept de la Boîte (La Variable)</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Métaphore :</strong> Une variable c'est comme un tiroir
+                dans l'ordinateur sur lequel on colle une étiquette (le nom) et
+                dans lequel on range quelque chose (la valeur).
+              </p>
+              <div class="python-code">
+                score = <span class="py-num">10</span><br />
+                pseudo = <span class="py-string">"SuperGamer"</span><br /><br />
+                <span class="py-func">print</span>(score)<br />
+                <span class="py-func">print</span>(pseudo)
+              </div>
+              <p style="font-style: italic; color: #666; font-size: 0.9rem">
+                Remarque : Si on écrit print("score"), ça affiche le mot, pas le
+                nombre !
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Demander quelque chose avec 'input()'</h3>
+              <span class="badge">30 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Contrairement à Scratch, l'ordinateur ne nous voit pas. Il faut
+                lui permettre de nous poser des questions.
+              </p>
+              <div class="python-code">
+                nom = <span class="py-func">input</span>(<span class="py-string"
+                  >"Comment t'appelles-tu ? "</span
+                >)<br />
+                <span class="py-func">print</span>(<span class="py-string"
+                  >"Bonjour "</span
+                >
+                + nom + <span class="py-string">" !"</span>)
+              </div>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>
+                  L'ordinateur met le programme en pause et attend qu'on tape
+                  sur "Entrée".
+                </li>
+                <li>
+                  Le petit secret : on utilise l'opérateur
+                  <strong>+</strong> pour "coller" des morceaux de texte
+                  ensemble (Concaténation).
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. Le Piège des Textes et des Nombres (Les Types)</h3>
+              <span class="badge">25 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Un texte (String) et un nombre entier (Integer) ne
+                s'additionnent pas.
+              </p>
+              <div class="python-code">
+                age = <span class="py-func">input</span>(<span class="py-string"
+                  >"Quel est ton âge ? "</span
+                >)<br />
+                <span class="py-comment"
+                  ># Si on tape 13, age vaut "13" (du texte), pas int(13)</span
+                ><br />
+                age_entier = <span class="py-func">int</span>(age)<br />
+                annee_naissance = <span class="py-num">2026</span> - age_entier
+              </div>
+              <p>
+                Il faut introduire les mots clés <strong>int()</strong> (pour
+                entier) et <strong>str()</strong> (pour chaîne de texte).
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Défi : "Le petit interrogatoire"</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Consignes :</strong> Écrivez un programme qui demande :
+              </p>
+              <ul class="custom-list">
+                <li>Le prénom de l'utilisateur</li>
+                <li>Sa couleur préférée</li>
+                <li>Son âge</li>
+              </ul>
+              <p>
+                Ensuite, le programme doit générer une phrase du style :
+                <em
+                  >"Salut [prénom] ! Ta couleur est le [couleur] et dans 10 ans,
+                  tu auras [age + 10] ans !"</em
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <ul class="custom-list">
+            <li>
+              Une <strong>variable</strong> a un Nom, et on lui donne une Valeur
+              avec le signe <strong>=</strong> (ex:
+              <span class="py-keyword">vie = 3</span>).
+            </li>
+            <li>
+              <span class="py-func">input( ... )</span> met le programme en
+              pause pour laisser l'utilisateur répondre au clavier.
+            </li>
+            <li>
+              Il existe plusieurs <strong>types</strong> de données :
+              <span class="py-keyword">str</span> (chaîne de caractères),
+              <span class="py-keyword">int</span> (nombres entiers).
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>Mise en mémoire RAM / Stockage temporaire (Variables)</li>
+              <li>Transtypage (Casting `int()`, `str()`)</li>
+              <li>Interaction et construction de phrases dynamiques</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

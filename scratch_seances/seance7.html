@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 7 – Messages et Synchronisation</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        Messages et Synchronisation
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 7 • Durée : 1h30
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">🎯</div>
+          <h2>Objectifs pédagogiques</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>Faire communiquer deux sprites (ou plus) ensemble</li>
+            <li>Utiliser l'événement "Diffuser un message"</li>
+          </ul>
+          <ul class="custom-list">
+            <li>Créer une histoire interactive ou un dialogue synchronisé</li>
+            <li>Orchestrer le changement de scènes (Niveaux)</li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. Problématique : Le Dialogue</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Constat :</strong> Si deux personnages parlent avec
+                "Dire pendant 2 secondes", ils parlent en même temps.
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>
+                  Comment faire pour que B attende que A ait fini de parler ?
+                  (On pourrait utiliser "Attendre 2 secondes", mais c'est
+                  difficile à maintenir).
+                </li>
+                <li>
+                  <strong>Solution :</strong> L'envoi de messages invisibles.
+                  C'est comme un talkie-walkie.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Activité : Conversation fluide</h3>
+              <span class="badge">25 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>Objectif :</strong> Créer une scène où deux Sprites
+                se répondent au bon moment.
+              </p>
+
+              <div class="grid-2" style="margin-top: 1rem">
+                <div class="code-block" style="margin: 0">
+                  <p
+                    style="
+                      color: #ff8c1a;
+                      font-weight: bold;
+                      margin-bottom: 5px;
+                    "
+                  >
+                    🐱 Sprite 1
+                  </p>
+                  <span class="event">Quand 🚩 est cliqué</span><br />
+                  <span class="looks">Dire</span>
+                  <span class="value">Bonjour !</span>
+                  <span class="looks">pendant</span>
+                  <span class="value">2</span>
+                  <span class="looks">secondes</span><br />
+                  <span class="event">Diffuser à tous</span>
+                  <span class="value">À_toi_de_parler</span>
+                </div>
+                <div class="code-block" style="margin: 0">
+                  <p
+                    style="
+                      color: #ff8c1a;
+                      font-weight: bold;
+                      margin-bottom: 5px;
+                    "
+                  >
+                    🐶 Sprite 2
+                  </p>
+                  <span class="event">Quand je reçois</span>
+                  <span class="value">À_toi_de_parler</span><br />
+                  <span class="looks">Dire</span>
+                  <span class="value">Salut, ça va ?</span>
+                  <span class="looks">pendant</span>
+                  <span class="value">2</span>
+                  <span class="looks">secondes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. L'Impact des Messages sur le Décors</h3>
+              <span class="badge">30 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Niveau Supérieur :</strong> Les messages peuvent être
+                reçus par TOUS les sprites, mais aussi par
+                <strong>la Scène (Arrière-plan)</strong>.
+              </p>
+              <p>
+                <em>Activité :</em> Un Magicien jette un sort. Quand il dit
+                "Abracadabra", il diffuse le message "Magie".
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>La scène reçoit "Magie" et change la couleur du fond.</li>
+                <li>
+                  Un autre personnage reçoit "Magie" et disparaît ("Cacher").
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Développer une histoire (Mini-projet)</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Création libre :</strong> Les élèves imaginent une
+                courte blague ou une situation magique à 2 personnages et 1
+                changement de scène.
+              </p>
+              <p style="font-style: italic; color: #666">
+                On encourage la duplication de messages (message1, message2,
+                message3...) pour faire des échanges complexes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <ul class="custom-list">
+            <li>
+              Les <strong>Messages</strong> (Événements jaunes) permettent de
+              synchroniser un programme.
+            </li>
+            <li>Un <strong>émetteur</strong> "diffuse" le message.</li>
+            <li>
+              Des <strong>récepteurs</strong> attendent avec "Quand je reçois".
+            </li>
+            <li>La <strong>Scène</strong> peut aussi recevoir des messages.</li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>Programmation événementielle (Déclencheurs)</li>
+              <li>
+                Multitâche logiciel (plusieurs scripts s'exécutant
+                simultanément)
+              </li>
+              <li>Scénarisation interactive</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+      <script src="script.js"></script>
+</body>
+</html>

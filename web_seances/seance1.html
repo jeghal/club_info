@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 1 – Introduction au HTML</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        Introduction au HTML
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 1 • Durée : 1h30
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">🏗️</div>
+          <h2>Objectifs pédagogiques</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>
+              Comprendre la différence entre un Navigateur (Chrome) et un
+              Éditeur de code (VS Code)
+            </li>
+            <li>Saisir le concept de "Balise" ouvrante et fermante (Tag)</li>
+          </ul>
+          <ul class="custom-list">
+            <li>Créer l'ossature de base absolue d'une page Web (.html)</li>
+            <li>
+              Utiliser les balises de Titres (h1 à h6) et de Paragraphe (p)
+            </li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. Sous le capot de l'Internet</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Démonstration :</strong> Aller sur un gros site (ex:
+                Wikipedia ou Google), faire un clic droit et choisir "Inspecter"
+                ou "Afficher le code source".
+              </p>
+              <p>
+                Ce qu'on voit à l'écran (le beau) est interprété par le
+                navigateur, mais derrière c'est juste du texte pur ! Le HTML
+                (HyperText Markup Language) n'est pas un langage de
+                programmation "logique" (pas de mathématiques), c'est un langage
+                de "description de contenu". On dit "Ceci est un titre", "Ceci
+                est une image".
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Le Squelette Indispensable</h3>
+              <span class="badge">25 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>L'Objectif :</strong> Ouvrir VS Code, créer un
+                fichier <code>index.html</code> et construire la base.
+              </p>
+              <div class="code-block">
+                <span class="c-tag">&lt;!DOCTYPE html&gt;</span><br />
+                <span class="c-tag">&lt;html&gt;</span><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-tag">&lt;head&gt;</span
+                ><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                  class="c-tag"
+                  >&lt;title&gt;</span
+                ><span class="c-str">Ma première page</span
+                ><span class="c-tag">&lt;/title&gt;</span><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-tag">&lt;/head&gt;</span
+                ><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-tag">&lt;body&gt;</span
+                ><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <p>Le contenu visible à l'écran ira ici !</p>
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-tag">&lt;/body&gt;</span
+                ><br />
+                <span class="c-tag">&lt;/html&gt;</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. Titres et Paragraphes</h3>
+              <span class="badge">30 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                La métaphore du Sandwich : Une balise HTML fonctionne souvent
+                par paire. Une tranche de pain pour ouvrir, la garniture, une
+                tranche pour fermer.
+              </p>
+              <div class="code-block">
+                <span class="c-tag">&lt;h1&gt;</span
+                ><span class="c-str">Mon Nom, Mon Titre Géant</span
+                ><span class="c-tag">&lt;/h1&gt;</span><br />
+                <span class="c-tag">&lt;h2&gt;</span
+                ><span class="c-str">Un sous-titre moins gros</span
+                ><span class="c-tag">&lt;/h2&gt;</span><br />
+                <span class="c-tag">&lt;p&gt;</span
+                ><span class="c-str"
+                  >Je m'appelle Alex et voici mon premier texte long.</span
+                ><span class="c-tag">&lt;/p&gt;</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Défi : "Ma présentation en vrac"</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Consignes :</strong> Coder un début de page sur vous ou
+                une passion.
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>Utiliser `h1` pour le gros titre global.</li>
+                <li>
+                  Utiliser plusieurs `h2` ou `h3` pour les sous-parties (Ex:
+                  "Mes films", "Mon plat favori").
+                </li>
+                <li>
+                  Sous chaque titre, rédiger une ou deux phrases avec `p`.
+                </li>
+              </ul>
+              <p style="font-style: italic; color: #666; margin-top: 5px">
+                (Sauvegarder et actualiser F5 la page dans Chrome !)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <ul class="custom-list">
+            <li>
+              La <strong>Tête</strong> (<code>&lt;head&gt;</code>) contient les
+              infos invisibles (ex: titre de l'onglet).
+            </li>
+            <li>
+              Le <strong>Corps</strong> (<code>&lt;body&gt;</code>) contient
+              tout ce qu'on voit sur l'écran.
+            </li>
+            <li>
+              Une balise HTML classique doit la plupart du temps être refermée :
+              <code>&lt;h1&gt; ... <strong>&lt;/h1&gt;</strong></code> (avec le
+              slash).
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>Fonctionnement Client-Serveur (Concept base).</li>
+              <li>Notion d'arborescence DOM (Parents/Enfants).</li>
+              <li>
+                Hiérarchie sémantique de l'information brute (sans style).
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

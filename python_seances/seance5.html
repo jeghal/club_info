@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 5 – Listes et Boucle For</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        Listes et Boucle For
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 5 • Durée : 1h30
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">🗂️</div>
+          <h2>Objectifs pédagogiques</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>Créer une Liste (inventaire) avec les Crochets `[ ]`</li>
+            <li>Ajouter, supprimer ou modifier des éléments dans la liste</li>
+          </ul>
+          <ul class="custom-list">
+            <li>
+              Découvrir la boucle <code>for</code> : Parcourir les éléments
+            </li>
+            <li>
+              Différencier la boucle `for` (quantité définie) et `while`
+              (quantité indéfinie)
+            </li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. La Commode magique (Les Listes)</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Jusqu'à présent, une Variable = une information. Imaginons qu'on
+                veuille stocker toute la classe ou l'inventaire d'aide, on
+                utiliserait 30 variables ? Non, on utilise une Liste !
+              </p>
+              <div class="python-code">
+                inventaire = [<span class="py-string">"Épée"</span>,
+                <span class="py-string">"Bouclier"</span>,
+                <span class="py-string">"Potion"</span>]<br /><br />
+                <span class="py-func">print</span>(inventaire)<br />
+                <span class="py-func">print</span>(inventaire[<span
+                  class="py-num"
+                  >0</span
+                >])
+                <span class="py-comment"
+                  ># Affiche Épée. En informatique, on compte à partir de 0
+                  !</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Manipuler l'Inventaire (.append, .remove)</h3>
+              <span class="badge">25 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>Le secret :</strong> L'inventaire est vivant.
+              </p>
+              <p>
+                Dans un RPG (Jeu de rôle), on ramasse ou on utilise des objets.
+              </p>
+              <div class="python-code">
+                inventaire.<span class="py-func">append</span>(<span
+                  class="py-string"
+                  >"Carte magique"</span
+                >) <span class="py-comment"># Ajoute à la fin du sac</span
+                ><br />
+                inventaire.<span class="py-func">remove</span>(<span
+                  class="py-string"
+                  >"Potion"</span
+                >) <span class="py-comment"># Jette la potion du sac</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. Parcourir le sac : La Boucle "Pour chaque" (For)</h3>
+              <span class="badge">25 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Si la boucle `While` était pour un nombre indéterminé de coups,
+                la boucle `For` est un scanneur. Elle "Parcourt" l'intégralité
+                d'un sac de gauche à droite.
+              </p>
+              <div class="python-code">
+                <span class="py-keyword">for</span> objet
+                <span class="py-keyword">in</span> inventaire:
+                <span class="py-comment"
+                  ># "Pour chaque (objet) dans (inventaire)"</span
+                ><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="py-func">print</span>(<span
+                  class="py-string"
+                  >"Je vois un "</span
+                >
+                + objet)
+              </div>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>
+                  "objet" est une variable temporaire qui change de nom toute
+                  seule à chaque tour !
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Défi : "Le Gestionnaire de Boutique"</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p><strong>Consignes :</strong></p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>Créer une liste (vide) <code>panier = []</code></li>
+                <li>
+                  Tant qu'on ne dit pas "Fin" dans un input (boucle `while`), on
+                  demande "Que veux-tu acheter?".
+                </li>
+                <li>On ajoute la réponse dans le `.append(panier)`.</li>
+                <li>Quand on dit "Fin", la boucle se `break`.</li>
+                <li>
+                  Ensuite, une boucle `for` s'affiche pour imprimer le reçu des
+                  achats listés !
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <ul class="custom-list">
+            <li>
+              Une Liste <span class="py-keyword">[]</span> peut stocker plein
+              d'informations en même temps.
+            </li>
+            <li>
+              En Python, l'index d'une liste (l'ordre) commence toujours à
+              <strong>zéro</strong>.
+            </li>
+            <li>
+              La Boucle <span class="py-keyword">for</span> est conçue pour
+              parcourir automatiquement (lire l'un après l'autre) tous les
+              éléments contenus dans une liste.
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>
+                Stockage de données multiples (Comprendre les Arrays/Listes)
+              </li>
+              <li>Utilisation des Mots-Clefs Méthodes (.append())</li>
+              <li>Itération systématique (Boucle for)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

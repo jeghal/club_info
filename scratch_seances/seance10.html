@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 10 – Création Mini-Jeu (Partie 2)</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        Finalisation et Présentation
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 10 • Projet Final (Durée : 1h30)
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">🏆</div>
+          <h2>Objectifs du Projet Final</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>
+              Rendre le mini-jeu fonctionnel (Variables : Score, Vies, Timer)
+            </li>
+            <li>
+              Mettre en place la condition de Fin du Jeu (Victoire/Défaite)
+            </li>
+          </ul>
+          <ul class="custom-list">
+            <li>
+              Tester les jeux des autres pour trouver des "bugs" (Bêta test)
+            </li>
+            <li>
+              Présenter sa création et expliquer son code devant les camarades
+            </li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. L'Ennemi et Les Variables</h3>
+              <span class="badge">30 min</span>
+            </div>
+            <div class="step-content">
+              <p><strong>Bâtir le Game Over et La Victoire.</strong></p>
+              <p>
+                Les élèves créent ou peaufinent les sprites d'ennemi (qui
+                bougent seuls grâce à l'Aléatoire vu en séance 8) ou les
+                "pièces/bonus".
+              </p>
+
+              <div class="code-block" style="margin-top: 10px">
+                <span class="event">Si</span>
+                <span class="looks">touchant [Ennemi] ?</span>
+                <span class="event">alors</span>
+                <div style="padding-left: 20px">
+                  <span class="looks" style="color: #ff8c1a"
+                    >Ajouter à [Vies] la valeur</span
+                  >
+                  <span class="value">-1</span><br />
+                  <span class="event">Si</span>
+                  <span class="looks" style="color: #59c059"
+                    >&lt; [Vies] = 0 &gt;</span
+                  >
+                  <span class="event">alors</span>
+                  <div style="padding-left: 20px">
+                    <span class="looks"
+                      >Basculer sur l'arrière-plan [Ecran_Defaite]</span
+                    ><br />
+                    <span class="event">Diffuser à tous</span>
+                    <span class="value">Game_Over</span><br />
+                    <span class="event">Stop Tout</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Effets Spéciaux et Sons (Le Polish)</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>Objectif :</strong> Rendre le jeu "fun" (Le "Game
+                Feel").
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>Ajouter un son "Pop" quand une pièce est attrapée.</li>
+                <li>Ajouter un son inquiétant à la Victoire ou Défaite.</li>
+                <li>
+                  Utiliser l'effet d'apparence "Fantôme" pour fluidifier
+                  l'apparition des ennemis.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. Phase de "Bêta-Test" croisé</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p><strong>Tester le jeu du voisin :</strong></p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>Chaque élève change de poste informatique.</li>
+                <li>
+                  Tâche du testeur : Essayer de casser le jeu (sortir des bords,
+                  etc.).
+                </li>
+                <li>
+                  Tâche du créateur : Noter les défauts pour les corriger.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Démonstration et Conclusion du cycle</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Les volontaires ou l'animateur projetnent quelques jeux sur le
+                vidéoprojecteur.
+              </p>
+              <p>
+                <strong>Bilan collectif :</strong> Ce qui a été difficile à
+                faire / Ce qui est amusant.
+              </p>
+              <p style="font-style: italic; color: #666; margin-top: 5px">
+                Féliciter tous les élèves pour leur parcours de jeunes
+                programmeurs !
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Bilan Final</h4>
+          <ul class="custom-list">
+            <li>
+              Scratch a permis de découvrir les blocs constitutifs de
+              <strong>tous les langages de programmation du monde</strong>
+              (Boucles, Variables, Conditions).
+            </li>
+            <li>
+              Le "Test" (Debug) est une phase aussi importante que le code
+              lui-même.
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div
+            class="small-card"
+            style="
+              height: auto;
+              background: linear-gradient(135deg, #ffd500 0%, #ff8c1a 100%);
+              color: white;
+              border: none;
+            "
+          >
+            <h4 style="color: white">🎓 Certification</h4>
+            <p
+              style="
+                font-size: 1.1rem;
+                font-weight: 600;
+                text-align: center;
+                margin-top: 10px;
+              "
+            >
+              Les élèves sont désormais de véritables<br />
+              Développeurs Scratch ! ⭐️
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+      <script src="script.js"></script>
+</body>
+</html>

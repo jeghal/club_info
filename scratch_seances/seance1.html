@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 1 – Découverte de Scratch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Floating Print Button -->
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        Découverte de Scratch
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 1 • Durée : 1h30
+      </p>
+    </header>
+
+    <div class="container">
+      <!-- Objectifs Card -->
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">🎯</div>
+          <h2>Objectifs pédagogiques</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>Comprendre ce qu’est un programme</li>
+            <li>Découvrir l’interface de Scratch</li>
+          </ul>
+          <ul class="custom-list">
+            <li>Identifier les principales catégories de blocs</li>
+            <li>Créer une première animation simple</li>
+          </ul>
+        </div>
+      </main>
+
+      <!-- Déroulement Card -->
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <!-- Step 1 -->
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. Introduction</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p><strong>Questionnement collectif :</strong></p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>Qu’est-ce qu’un programme ?</li>
+                <li>Où trouve-t-on des programmes dans la vie quotidienne ?</li>
+                <li>Comment un ordinateur comprend-il des instructions ?</li>
+              </ul>
+              <div class="callout">
+                <span class="emoji">💡</span>
+                <div>
+                  <strong>Faire émerger l’idée :</strong><br />
+                  Un programme est une suite d’instructions exécutées dans un
+                  ordre précis.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Découverte de l'interface</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p><strong>Faire explorer les élèves :</strong></p>
+              <div class="grid-2" style="margin-top: 1rem">
+                <ul class="custom-list">
+                  <li>🧩 Palette de blocs (à gauche)</li>
+                  <li>🧠 Zone de scripts (au centre)</li>
+                  <li>🎭 Scène (à droite)</li>
+                </ul>
+                <ul class="custom-list">
+                  <li>🐱 Sprite (personnage)</li>
+                  <li>🚩 Bouton drapeau vert</li>
+                </ul>
+              </div>
+              <div
+                class="small-card"
+                style="margin-top: 1.5rem; padding: 1.5rem"
+              >
+                <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem">
+                  📝 Vocabulaire à introduire
+                </h4>
+                <p style="font-weight: 600; color: var(--text-main)">
+                  Script, Bloc, Sprite, Scène, Événement.
+                </p>
+              </div>
+              <p
+                style="
+                  margin-top: 1rem;
+                  font-style: italic;
+                  color: var(--text-muted);
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                "
+              >
+                <span>✨</span> Laisser une petite manipulation libre de 5
+                minutes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. Première animation guidée</h3>
+              <span class="badge">30 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>Objectif :</strong> Créer un programme où le chat
+                avance de 100 pas et dit « Bonjour » pendant 2 secondes.
+              </p>
+
+              <div class="code-block">
+                <span class="event">Quand 🚩 est cliqué</span><br />
+                <span class="motion">Avancer de</span>
+                <span class="value">100</span><br />
+                <span class="looks">Dire</span>
+                <span class="value">Bonjour</span>
+                <span class="looks">pendant</span> <span class="value">2</span>
+                <span class="looks">secondes</span>
+              </div>
+
+              <div
+                class="callout"
+                style="
+                  border-color: var(--scratch-orange);
+                  background: rgba(255, 140, 26, 0.08);
+                  color: #c0392b;
+                "
+              >
+                <span class="emoji">⚠️</span>
+                <div>
+                  <strong>Insister sur :</strong><br />
+                  L’ordre des blocs et l’importance de l’événement déclencheur
+                  (le drapeau vert).
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Personnalisation</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p><strong>Les élèves doivent :</strong></p>
+              <div class="grid-2" style="margin-top: 0.8rem">
+                <ul class="custom-list">
+                  <li>Changer le message</li>
+                  <li>Modifier la distance</li>
+                </ul>
+                <ul class="custom-list">
+                  <li>Ajouter un deuxième mouvement</li>
+                  <li>Changer de costume</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>5. Défi rapide</h3>
+              <span class="badge">10 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Créer une mini-animation libre avec au moins :</strong>
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>3 blocs différents</li>
+                <li>Un message affiché</li>
+                <li>Un mouvement visible</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <p
+            style="
+              font-size: 0.9rem;
+              color: var(--text-muted);
+              margin-top: -10px;
+              margin-bottom: 15px;
+              font-style: italic;
+            "
+          >
+            (À copier dans le cahier par les élèves)
+          </p>
+          <ul class="custom-list">
+            <li>
+              <strong>Scratch</strong> est un logiciel de programmation par
+              blocs.
+            </li>
+            <li>Un <strong>programme</strong> est une suite d’instructions.</li>
+            <li>
+              Un <strong>sprite</strong> exécute un
+              <strong>script</strong> quand un <strong>événement</strong> se
+              produit.
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>Comprendre un environnement numérique</li>
+              <li>Organiser une suite d’instructions</li>
+              <li>Tester et corriger un programme</li>
+            </ul>
+          </div>
+          <div class="small-card" style="height: auto">
+            <h4>🏠 Prolongement (Maison)</h4>
+            <ul class="custom-list">
+              <li>Se connecter à Scratch en ligne</li>
+              <li>Reproduire l’animation</li>
+              <li>Ajouter un deuxième personnage</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+      <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Séance 8 – Saupoudrer de JavaScript</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()" title="Imprimer la fiche pédagogique">🖨️</button>
+
+    <header class="hero">
+        <h1 class="fade-in" style="animation-delay: 0.1s;">Saupoudrer du JavaScript</h1>
+        <p class="fade-in" style="animation-delay: 0.2s;">Séance 8 • Durée : 1h30</p>
+    </header>
+
+    <div class="container">
+        
+        <main class="card fade-in" style="animation-delay: 0.3s;">
+            <div class="card-header">
+                <div class="icon">⚡</div>
+                <h2>Objectifs pédagogiques</h2>
+            </div>
+            <div class="grid-2">
+                <ul class="custom-list">
+                    <li>Insuffler la "Vie" à la page statique. Gérer des événements souris.</li>
+                    <li>Utiliser la balise `&lt;script&gt;` au cœur du HTML.</li>
+                </ul>
+                <ul class="custom-list">
+                    <li>Afficher une fenêtre modale basique `alert()`.</li>
+                    <li>Manipuler et Modifier la taille, le texte, ou la couleur d'une structure en un seul clic !</li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="card fade-in" style="animation-delay: 0.4s;">
+            <div class="card-header">
+                <div class="icon">🕒</div>
+                <h2>Déroulement de la séance</h2>
+            </div>
+            
+            <div class="timeline">
+                
+                <div class="timeline-step">
+                    <div class="step-header">
+                        <h3>1. Les Poupées Russes (HTML + JS)</h3>
+                        <span class="badge">15 min</span>
+                    </div>
+                    <div class="step-content">
+                        <p><strong>HTML</strong> (Squelette/os), <strong>CSS</strong> (Peau/Poils), <strong>JavaScript</strong> (Muscle/Cerveau).</p>
+                        <p>JS est un véritable langage similaire au Python (Il possède des Variables, Conditions et des Boucles <code>for</code>).</p>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-header">
+                        <h3>2. Hello Word du Navigateur</h3>
+                        <span class="badge">20 min</span>
+                    </div>
+                    <div class="step-content">
+                        <p style="font-size: 1.1rem;">🎯 <strong>L'Objectif : </strong> Ouvrir un script à la fin du `<body\>` et faire popper un message.</p>
+                        <div class="code-block" style="margin-top: 10px;">
+                            <span class="c-tag">&lt;body&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-tag">&lt;h1&gt;</span><span class="c-str">Ma page d'accueil</span><span class="c-tag">&lt;/h1&gt;</span><br>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6A9955; font-style:italic;">&lt;!-- Juste avant la fin du Corps, on insère l'intelligence artificielle ! --&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-tag">&lt;script&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #DCDCAA;">alert</span>(<span class="c-str">"Bienvenue jeune codeur !"</span>);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-tag">&lt;/script&gt;</span><br>
+                            <span class="c-tag">&lt;/body&gt;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-header">
+                        <h3>3. La Manipulation du Monde (Le DOM)</h3>
+                        <span class="badge">30 min</span>
+                    </div>
+                    <div class="step-content">
+                        <p>Pour qu'un bouton serve à quelque chose, il faut l'"Écouter" ('onClick=...'). Puis cibler le mur ('getElementById') et lui changer sa peinture.</p>
+                        
+                        <div class="code-block" style="margin-top: 10px;">
+                            <span class="c-tag">&lt;h1</span> <span class="c-attr">id</span>=<span class="c-str">"grand-titre"</span><span class="c-tag">&gt;</span><span class="c-str">Bonjour !</span><span class="c-tag">&lt;/h1&gt;</span><br>
+                            <span class="c-tag">&lt;button</span> <span class="c-attr">onclick</span>=<span class="c-str">"changerLeTitre()"</span><span class="c-tag">&gt;</span><span class="c-str">Magie Noire</span><span class="c-tag">&lt;/button&gt;</span><br>
+                            <br>
+                            <span class="c-tag">&lt;script&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #569CD6;">function</span> <span style="color: #DCDCAA;">changerLeTitre</span>() {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let element = document.<span style="color: #DCDCAA;">getElementById</span>(<span class="c-str">"grand-titre"</span>);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element.innerHTML = <span class="c-str">"Le texte a muté !"</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element.style.color = <span class="c-str">"red"</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <span class="c-tag">&lt;/script&gt;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-header">
+                        <h3>4. Défi "Change Mode ! (Dark/Light)"</h3>
+                        <span class="badge">25 min</span>
+                    </div>
+                    <div class="step-content">
+                        <p><strong>Consignes :</strong> Demander aux élèves de créer un bouton "Lunaire 🌙".</p>
+                        <p>En JS, cibler directement le coeur de la balise globale <code>document.body.style.backgroundColor = "black";</code> et <code>...color = "white";</code>. Félicitations, ils viennent de recréer l'algorithme iconique qu'on retrouve sur le Web moderne pour le Dark Mode !.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer / Trace écrite -->
+        <div class="grid-2 fade-in" style="animation-delay: 0.5s;">
+            <div class="small-card">
+                <h4>📝 Trace écrite</h4>
+                <ul class="custom-list">
+                    <li>Le <strong>D.O.M</strong> (Document Object Model) s'apparente, pour le Navigateur, à un arbre où on peut viser et chercher précisément ses branches et ses feuilles avec <span style="color: #DCDCAA;">getElementById</span>.</li>
+                    <li><span class="c-attr">onclick=""</span> est un "Écouteur d'évènement" très pratique si placé dans un bouton HTML !</li>
+                </ul>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 2rem;">
+                <div class="small-card" style="height: auto;">
+                    <h4>🎓 Compétences travaillées</h4>
+                    <ul class="custom-list">
+                        <li>Première plongée dans l’interactivité Client-Side réelle.</li>
+                        <li>Logique d'Algorithmic Event-Driven (Causale/Réponse).</li>
+                        <li>Fonctions / Methods DOM API.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

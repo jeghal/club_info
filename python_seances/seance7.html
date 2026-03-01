@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 7 – Fonctions (def)</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">Les Fonctions (def)</h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 7 • Durée : 1h30
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">⚙️</div>
+          <h2>Objectifs pédagogiques</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>Ne pas se répéter (Principe D.R.Y = Don't Repeat Yourself)</li>
+            <li>
+              Créer ses propres instructions (Les "Mots Violets" construits par
+              nous)
+            </li>
+          </ul>
+          <ul class="custom-list">
+            <li>Définir et Appeler une fonction (`def`)</li>
+            <li>Transmettre une information à une fonction (Les Paramètres)</li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. Problème : Le code trop long</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Imaginons un code de jeu qui doit afficher l'écran principal,
+                puis la demande de score, puis le boss de fin, puis l'écran
+                principal... Comment faire pour ne pas tout retaper ou
+                copier/coller brutalement ?
+              </p>
+              <p>
+                <strong>Rappel Scratch :</strong> Les blocs roses "Mes Blocs"
+                (Créer un bloc).
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Le Mot-Clé "def" (Définir)</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>L'Objectif :</strong> On crée le dictionnaire de la
+                machine, puis on lui parle.
+              </p>
+              <div class="python-code">
+                <span class="py-keyword">def</span>
+                <span class="py-func">dire_bonjour</span>():
+                <span class="py-comment"># Étape 1 : Je définis la recette</span
+                ><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="py-func">print</span>(<span
+                  class="py-string"
+                  >"Bonjour tout le monde !"</span
+                >)<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="py-func">print</span>(<span
+                  class="py-string"
+                  >"Bienvenue dans le jeu."</span
+                >)<br /><br />
+
+                <span class="py-comment"
+                  ># Étape 2 : J'appelle la fonction dans mon programme
+                  principal</span
+                ><br />
+                <span class="py-func">dire_bonjour</span>()<br />
+                <span class="py-func">print</span>(<span class="py-string"
+                  >"---"</span
+                >)<br />
+                <span class="py-func">dire_bonjour</span>()
+                <span class="py-comment"># Gain de place !</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. Le Super pouvoir des "Paramètres"</h3>
+              <span class="badge">25 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Une fonction c'est bien, mais si elle fait à chaque fois
+                <em>exactement</em> la même chose, c'est limité. On peut lui
+                donner une "variante" (le paramètre) entre ses parenthèses.
+              </p>
+              <div class="python-code">
+                <span class="py-keyword">def</span>
+                <span class="py-func">dire_bonjour_a</span>(prenom):<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="py-func">print</span>(<span
+                  class="py-string"
+                  >"Bonjour "</span
+                >
+                + prenom +
+                <span class="py-string">" ! Commençons."</span>)<br /><br />
+
+                <span class="py-func">dire_bonjour_a</span>(<span
+                  class="py-string"
+                  >"Alex"</span
+                >)
+                <span class="py-comment"># Le nom 'Alex' remplace 'prenom'</span
+                ><br />
+                <span class="py-func">dire_bonjour_a</span>(<span
+                  class="py-string"
+                  >"Sarah"</span
+                >)
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Défi avec Turtle : "Dessine-moi 5 carrés"</h3>
+              <span class="badge">30 min</span>
+            </div>
+            <div class="step-content">
+              <p><strong>Consignes :</strong> Reprendre Turtle (Séance 6).</p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>Créer une fonction <code>def dessiner_carre()</code>.</li>
+                <li>Ajouter la boucle "For 4 fois... forward, left" dedans.</li>
+                <li>
+                  Dans le programme principal, taper 5 fois `dessiner_carre()`
+                  avec un léger `backward(10)` entre chaque pour créer un effet
+                  d'escalier ou un motif.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <ul class="custom-list">
+            <li>
+              <span class="py-keyword">def</span> sert à créer (Définir) une
+              fonction maison.
+            </li>
+            <li>
+              Comme pour le <span class="py-keyword">if</span> ou le
+              <span class="py-keyword">while</span>, le code à l'intérieur d'une
+              fonction doit être Indenté (espacé à droite).
+            </li>
+            <li>
+              Rien ne s'exécute tant qu'on n'a pas <strong>appelé</strong> la
+              fonction en bas de page.
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>Architecture de code (Séparation des préoccupations)</li>
+              <li>Organisation et nettoyage d'un script (Modularisation)</li>
+              <li>Gestion des Paramètres basiques.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

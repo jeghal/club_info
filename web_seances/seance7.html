@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 7 – Responsive (Pour Téléphones)</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        Adaptation Mobile (Responsive)
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 7 • Durée : 1h30
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">📱</div>
+          <h2>Objectifs pédagogiques</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>
+              Comprendre que 70% d'internet se regarde sur son téléphone 📲.
+            </li>
+            <li>
+              Savoir simuler ou réduire la fenêtre son navigateur web pour voir
+              les "Casses" visuelles.
+            </li>
+          </ul>
+          <ul class="custom-list">
+            <li>
+              Utiliser L'incantation <span class="c-prop">@media</span> queries
+              pour changer les règles de CSS.
+            </li>
+            <li>
+              Cacher un bloc ou replier un Flex en colonne selon la largeur
+              (Width).
+            </li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. Le crash test !</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Cata : </strong> Demander de prendre les superbes
+                Flexbox "Menu Haut" de la dernière fois, de réduire le
+                navigateur VS Code à gauche et Google à Droite, et de regarder
+                ce qui se passe quand il n'y plus de place sur l'écran !
+              </p>
+              <p>
+                Tout s'écrase ou sort avec une grosse barre moche en bas (Scroll
+                horizontal). Il faut intervenir !
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Le Mot Magique : Les Media Queries</h3>
+              <span class="badge">25 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>L'Objectif : </strong> Donner un ordre "Si, et
+                Seulement Si l'écran est tout petit, alors Override les règles
+                !"
+              </p>
+              <div class="code-block" style="margin-top: 10px">
+                <span style="color: #6a9955; font-style: italic"
+                  >/* Règles CSS normales P.C fixes (1er) */</span
+                ><br />
+                <span class="c-attr">.ligne</span> {
+                <span class="c-prop">display</span>:
+                <span class="c-val">flex</span>; } <br /><br />
+                <span style="color: #6a9955; font-style: italic"
+                  >/* Règles conditionnelles Téléphone (à mettre TOUT en bas du
+                  fichier .css) */</span
+                ><br />
+                <span style="color: #c586c0">@media</span> (max-width:
+                <span class="c-val">768px</span>) {<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-attr">.ligne</span> {
+                <span class="c-prop">flex-direction</span>:
+                <span class="c-val">column</span>; }
+                <span style="color: #6a9955; font-style: italic"
+                  >/* Casse la ligne et empile les blocs */</span
+                ><br />
+                }
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. Mobile-First & Disparition.</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Parfois on ne peut pas tout empiler car c'est trop long
+                (Imaginez Wikipedia en colonne d'une page longue de 600 mères).
+                On peut décider de forcer l'effacement de grosses boites
+                inutiles !
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>Dans le <code>@media (max-width: 768px) {</code></li>
+                <li>
+                  Ajouter : <code>.photo-deco { display: none; }</code>.
+                  L'ordinateur désactive l'affichage global au calcul (La boite
+                  disparait = le site est fluide).
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Défi "Pile ou Ligne"</h3>
+              <span class="badge">30 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Consignes :</strong> Finaliser la maquette globale de la
+                page principale pour le diplôme. Y placer 3 grosses images
+                carrées au centre (`width: 30%` & `justify-content:
+                space-between`).
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>
+                  Ouvrir le mode "Inspecter (Smartphone Device Toolbar)" sur
+                  Chrome (Ctrl+Shift+M).
+                </li>
+                <li>
+                  Écrire la ligne de `media-query` ciblant le parent des 3
+                  images.
+                </li>
+                <li>
+                  Transformer `flex-direction` en `column` sur Smartphone.
+                </li>
+                <li>
+                  Redimensionner la fenêtre à la main pour voir le changement en
+                  temps réel s'opérer (Effet Wahou !) !.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <ul class="custom-list">
+            <li>
+              La commande <span class="c-prop">@media</span> se trouve toujours
+              "en bas" du fichier CSS pour écraser ce qui est validé "en haut" à
+              l'arrivée (Lecture de haut en bas).
+            </li>
+            <li>
+              En Responsive, les <span class="c-val">px</span> fixes cèdent très
+              souvent leur place aux Pourcentages (<span class="c-val">%</span>)
+              pour remplir l'espace dynamiquement.
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>Approche Mobile-First intégrée.</li>
+              <li>Logique d'Héritage (Cascading CSS complet compris).</li>
+              <li>
+                Dev-Tools Avancé (Simulateur Téléphone/Tablette F12 Chrome).
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

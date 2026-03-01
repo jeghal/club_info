@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 10 – Projet Final (RP/Texte) - Partie 2</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        Finalisation (Projet Libre)
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 10 • Projet Final (Durée : 1h30)
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">🏆</div>
+          <h2>Objectifs du Projet Final</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>Rendre le projet textuel passionnant et interactif</li>
+            <li>
+              Ajouter des couleurs dans la console (Module "colorama" ou "ANSI")
+            </li>
+          </ul>
+          <ul class="custom-list">
+            <li>Déboguer en groupe (Le "Pair Programming")</li>
+            <li>Présenter les créations au groupe complet</li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. Les Boucles Imbriquées (Monstres)</h3>
+              <span class="badge">30 min</span>
+            </div>
+            <div class="step-content">
+              <p><strong>Bâtir les combats (Pour les RPG) :</strong></p>
+              <p>
+                Si le joueur affronte un monstre, la boucle de combat s'lance
+                dans la grande boucle du jeu.
+              </p>
+
+              <div class="python-code" style="margin-top: 10px">
+                <span class="py-keyword">while</span> pv_monstre >
+                <span class="py-num">0</span>
+                <span class="py-keyword">and</span> pv_joueur >
+                <span class="py-num">0</span>:<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;choix =
+                <span class="py-func">input</span>(<span class="py-string"
+                  >"(A)ttaquer ou (F)uir ?"</span
+                >)<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="py-keyword">if</span> choix
+                == <span class="py-string">"A"</span>:<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;degats =
+                random.<span class="py-func">randint</span>(<span class="py-num"
+                  >5</span
+                >, <span class="py-num">15</span>)<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pv_monstre =
+                pv_monstre - degats<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                  class="py-func"
+                  >print</span
+                >(<span class="py-string">"Bim ! "</span> +
+                <span class="py-func">str</span>(degats) +
+                <span class="py-string">" de dégâts."</span>)
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Le "Polish" et l'Esthétique</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>Objectif :</strong> Mettre de l'ambiance.
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>
+                  Importer le module <code>time</code> et utiliser
+                  <code>time.sleep(1)</code> pour donner du suspens entre les
+                  textes affichés.
+                </li>
+                <li>
+                  Ajouter du caractère gras ou de la couleur avec les codes
+                  d'échappement ANSI (ex: <code>\033[91m</code> pour le rouge
+                  sang).
+                </li>
+              </ul>
+              <div class="python-code" style="margin-top: 5px">
+                <span class="py-keyword">import</span> time<br />
+                <span class="py-func">print</span>(<span class="py-string"
+                  >"Le coffre s'ouvre..."</span
+                >)<br />
+                time.<span class="py-func">sleep</span>(<span class="py-num"
+                  >2</span
+                >) <span class="py-comment"># Attends 2 secondes</span><br />
+                <span class="py-func">print</span>(<span class="py-string"
+                  >"Tu trouves la Vraie Épée !"</span
+                >)
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. Le Test des Copains</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p><strong>Phase de lancement (Beta Testing) :</strong></p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>Échanger les claviers avec le voisin de table.</li>
+                <li>
+                  Le testeur doit essayer d'entrer les mauvais textes quand on
+                  lui demande un chiffre, pour voir comment le code réagit.
+                </li>
+                <li>
+                  Le développeur corrige les faiblesses grâce à
+                  <code>if... elif... else</code>.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Démonstration et Conclusion Python</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Passage d'un à un (sur la base du volontariat) pour jouer aux
+                œuvres des autres via un grand écran (Vidéoprojecteur).
+              </p>
+              <p style="font-style: italic; color: #666; margin-top: 5px">
+                On discute ensuite des métiers liés (Ingénieur Backend, Data
+                Analyst) pour les remotiver pour l'année à venir !
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Bilan Final</h4>
+          <ul class="custom-list">
+            <li>
+              Vous savez désormais maîtriser l'architecture de base du Python
+              (<span class="py-func">Print</span>,
+              <span class="py-func">Input</span>, Variables,
+              <span class="py-keyword">If/Else</span>, Boucles et Fonctions).
+            </li>
+            <li>
+              Le "Test" (Debug) et le nettoyage sont le quotidien d'un vrai
+              programmeur.
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div
+            class="small-card"
+            style="
+              height: auto;
+              background: linear-gradient(
+                135deg,
+                var(--python-blue) 0%,
+                var(--python-yellow) 100%
+              );
+              color: #1e1e24;
+              border: none;
+            "
+          >
+            <h4 style="color: #1e1e24">🎓 Diplôme d'Initié Python</h4>
+            <p
+              style="
+                font-size: 1.1rem;
+                font-weight: 800;
+                text-align: center;
+                margin-top: 10px;
+              "
+            >
+              Les élèves sont désormais familiers<br />
+              au code Textuel ! 🐍
+            </p>
+            <p style="text-align: center; font-size: 0.9rem; margin-top: 5px">
+              Prochaine étape : Le Web HTML/CSS.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

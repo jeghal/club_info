@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 8 – Aléatoire et Opérateurs</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        Aléatoire et Opérateurs
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 8 • Durée : 1h30
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">🎯</div>
+          <h2>Objectifs pédagogiques</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>Comprendre la notion de "nombre aléatoire" (hasard)</li>
+            <li>Utiliser les opérateurs mathématiques (+, -, *, /)</li>
+          </ul>
+          <ul class="custom-list">
+            <li>
+              Jouer avec la taille, l'apparence ou la vitesse aléatoirement
+            </li>
+            <li>Créer un jeu imprévisible (Chauve-souris esquive)</li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. Le Hasard en Informatique</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Discussion :</strong> Un jeu est ennuyeux si tout se
+                passe toujours de la même manière. Comment l'ordinateur
+                lance-t-il un dé ?
+              </p>
+              <p>
+                Découverte de la catégorie <strong>Opérateurs</strong> (Vert
+                clair).
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>Explorer le bloc "Nombre aléatoire entre [1] et [10]".</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Activité : Sprites Fous !</h3>
+              <span class="badge">30 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>Objectif :</strong> Faire apparaître des objets de
+                taille et à des endroits imprévisibles.
+              </p>
+
+              <div class="code-block">
+                <span class="event">Quand 🚩 est cliqué</span><br />
+                <span class="event">Répéter indéfiniment</span>
+                <div style="padding-left: 20px">
+                  <span class="motion">Aller à x:</span>
+                  <span class="value" style="background: #59c059; color: white"
+                    >Nombre aléatoire entre -200 et 200</span
+                  ><br />
+                  <span class="motion">Aller à y:</span>
+                  <span class="value" style="background: #59c059; color: white"
+                    >Nombre aléatoire entre 50 et 150</span
+                  ><br />
+                  <span class="looks">Mettre la taille à</span>
+                  <span class="value" style="background: #59c059; color: white"
+                    >Nombre aléatoire entre 20 et 100</span
+                  >
+                  <span class="looks">%</span><br />
+                  <span class="event">Créer un clone de moi-même</span>
+                  <i style="color: var(--text-muted); font-size: 12px"
+                    >(Optionnel, introduction légère au clonage)</i
+                  ><br />
+                  <span class="event">Attendre</span>
+                  <span class="value" style="background: #59c059; color: white"
+                    >Nombre aléatoire entre 0.5 et 2</span
+                  >
+                  <span class="event">secondes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. Modificateur de difficulté (Opérateurs mathématiques)</h3>
+              <span class="badge">25 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Pour un jeu de chute d'objets (ex: des pommes tombent). Si le
+                joueur a un gros Score, les pommes tombent plus vite !
+              </p>
+              <p>
+                Utilisation des opérateurs <strong>+</strong> et
+                <strong>-</strong> avec des Variables :
+              </p>
+              <div class="code-block" style="margin-top: 10px">
+                <span class="motion">Ajouter à y :</span>
+                <span class="value" style="background: #59c059; color: white"
+                  >-5 - (Score)</span
+                >
+              </div>
+              <p style="font-style: italic; color: #666; font-size: 0.9rem">
+                Plus le score est grand, plus Y descend vite (ex: -5 - 10 =
+                -15).
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Défi "Jeu de la Pomme Empoisonnée"</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p><strong>Consignes :</strong></p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>Un lutin se déplace au clavier en bas de l'écran.</li>
+                <li>
+                  Des pommes qui apparaissent aléatoirement en X tombent du
+                  ciel.
+                </li>
+                <li>Attraper = Score +1.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <ul class="custom-list">
+            <li>
+              La catégorie <strong>Opérateurs</strong> permet de faire des
+              calculs.
+            </li>
+            <li>
+              Le bloc <strong>Aléatoire</strong> choisi un nombre au hasard
+              entre deux limites.
+            </li>
+            <li>
+              L'aléatoire ajoute de la surprise (rejouabilité) à nos programmes
+              et jeux vidéos.
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>Manipulation des nombres (Positifs/Négatifs)</li>
+              <li>Logique d'équations avec variables Mathématiques</li>
+              <li>Génération procédurale simple (Hasard)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+      <script src="script.js"></script>
+</body>
+</html>

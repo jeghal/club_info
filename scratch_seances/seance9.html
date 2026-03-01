@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 9 – Création Mini-Jeu (Partie 1)</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        Création Libre - Partie 1
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 9 • Projet Final (Durée : 1h30)
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">🧩</div>
+          <h2>Objectifs du Projet Final</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>Appliquer les concepts des 8 séances précédentes</li>
+            <li>Rédiger un "Cahier des charges" (Brouillon papier)</li>
+          </ul>
+          <ul class="custom-list">
+            <li>
+              Mettre en place la scène, les acteurs (Sprites) et l'ambiance
+            </li>
+            <li>Programmer les mouvements fondamentaux de l'interface</li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. Remue-méninges (Brainstorming)</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p><strong>Cahier des charges sur papier :</strong></p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>
+                  <strong>Le Héro :</strong> Qui est-ce ? Comment se
+                  déplace-t-il (Clavier ou Souris) ?
+                </li>
+                <li>
+                  <strong>Les Ennemis :</strong> Que se passe-t-il si on les
+                  touche ? Bougent-ils au hasard ?
+                </li>
+                <li>
+                  <strong>Le But :</strong> Ramasser des pièces ? Atteindre la
+                  fin du parcours ? Survivre le plus longtemps possible ?
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Le Design et l'Ambiance</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>Objectif :</strong> Préparer "le plateau de jeu".
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>
+                  Création ou choix des Arrière-plans (Ex: Espace, Forêt,
+                  Ville).
+                </li>
+                <li>
+                  Sélection et redimensionnement judicieux des Sprites (ils ne
+                  doivent pas être trop gros).
+                </li>
+                <li>
+                  Création de l'écran "Menu Principal" (Arrière-plan 1 avec le
+                  titre de leur jeu).
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. Coder la "Core-Loop" (Mouvement et Bouton Start)</h3>
+              <span class="badge">40 min</span>
+            </div>
+            <div class="step-content">
+              <p><strong>Mise en place de la fonction Jouer :</strong></p>
+              <div class="code-block" style="margin-top: 10px">
+                <span class="event">Quand 🚩 est cliqué</span><br />
+                <span class="looks"
+                  >Basculer sur l'arrière-plan [Ecran_Accueil]</span
+                ><br />
+                <span class="looks">Cacher</span>
+                <i style="color: var(--text-muted); font-size: 12px"
+                  >(Cacher le personnage sur l'écran d'accueil)</i
+                ><br /><br />
+
+                <span class="event">Quand je reçois</span>
+                <span class="value">Lancer_Partie</span><br />
+                <span class="looks">S'afficher</span><br />
+                <span class="looks">Basculer sur l'arrière-plan [Niveau_1]</span
+                ><br />
+                <span class="motion">Aller à x: 0 y: -100</span><br />
+                <i style="color: var(--text-muted); font-size: 12px"
+                  >... (Code de déplacement vu Séance 4) ...</i
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. "Playtest" intermédiaire</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Les élèves vérifient : est-ce que le personnage de base bouge
+                bien sans beug ? Est-ce que mon écran d'accueil fonctionne ?
+              </p>
+              <p style="font-style: italic; color: #666">
+                Ne pas encore gérer les ennemis et les scores, ce sera le but de
+                la Séance 10.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <ul class="custom-list">
+            <li>
+              Un projet informatique commence toujours par une étape de
+              <strong>réflexion</strong> (cahier des charges sur papier).
+            </li>
+            <li>
+              On code d'abord la base (le mouvement du joueur et les décors)
+              avant d'ajouter la difficulté.
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>Mener un projet numérique de sa conception à sa création</li>
+              <li>
+                Identifier un besoin numérique et y répondre de manière créative
+              </li>
+              <li>Autonomie et synthèse des connaissances antérieures.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+      <script src="script.js"></script>
+</body>
+</html>

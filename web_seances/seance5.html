@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 5 – Classes et Identifiants (CSS Avancé)</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        Classes et Identifiants (ID)
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 5 • Durée : 1h30
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">🏷️</div>
+          <h2>Objectifs pédagogiques</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>
+              Cesser de cibler par erreur TOUTES les balises de la page avec
+              <code>p {}</code> ou <code>img {}</code>.
+            </li>
+            <li>
+              Comprendre la différence fondamentale entre `class=""` et `id=""`.
+            </li>
+          </ul>
+          <ul class="custom-list">
+            <li>
+              Utiliser le Point (<code>.</code>) en CSS pour toucher une Classe.
+            </li>
+            <li>
+              Utiliser le Dièse (<code>#</code>) en CSS pour cibler
+              exclusivement un ID unique.
+            </li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. Le danger du Ciblage Global</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Problème :</strong> Dans un vrai site web, il y a des
+                centaines de balises <code>&lt;p&gt;</code>. Si on écrit `p {
+                color: red; }`, absolument tout devient rouge.
+              </p>
+              <p>
+                Il nous faut des "étiquettes" personnelles pour regrouper les
+                paragraphes (ex: Titres principaux). C'est là qu'interviennent
+                la <strong>Class</strong> et l'<strong>ID (Identifiant)</strong
+                >.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Le groupe sanguin (La Class)</h3>
+              <span class="badge">25 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>L'Objectif :</strong> Donner une étiquette à DES
+                éléments d'une liste.
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>
+                  Dans le HTML : <span class="c-tag">&lt;p</span>
+                  <span class="c-attr">class</span>=<span class="c-str"
+                    >"alerte"</span
+                  ><span class="c-tag">&gt;</span
+                  ><span class="c-str">Faites attention !</span
+                  ><span class="c-tag">&lt;/p&gt;</span>
+                </li>
+                <li>
+                  Dans le CSS (On met un <strong>POINT</strong> devant) :<br />
+                  <span class="c-attr">.alerte</span> {
+                  <span class="c-prop">color</span>:
+                  <span class="c-val">red</span>;
+                  <span class="c-prop">font-weight</span>:
+                  <span class="c-val">bold</span>; }
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. Le passeport ou ADN complet (L'ID)</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Un Identifiant est strictement <strong>Unique</strong> sur toute
+                la page web (Comme l'ID national).
+              </p>
+              <div class="code-block" style="margin-top: 10px">
+                <span class="c-tag">&lt;div</span>
+                <span class="c-attr">id</span>=<span class="c-str"
+                  >"menu-principal"</span
+                ><span class="c-tag">&gt; ...&lt;/div&gt;</span>
+                <br /><br /><span style="color: #6a9955; font-style: italic"
+                  >/* Dans le CSS (On utilise le fameux "Hashtag") : */</span
+                ><br />
+                <span class="c-attr">#menu-principal</span> { <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-prop"
+                  >background-color</span
+                >: <span class="c-val">gray</span>; <br />
+                }
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Défi "Les 4 saisons"</h3>
+              <span class="badge">30 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Consignes :</strong> Reproduire l'ambiance des 4 Saisons
+                grâce aux Classes HTML.
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>
+                  Créer 4 blocs `&lt;div&gt;` pour chaque saison. Contenir un
+                  `h2` et un `p`.
+                </li>
+                <li>
+                  Mettre `
+                  <div class="hiver">...</div>
+                  `, etc.
+                </li>
+                <li>
+                  Dans le CSS : `.hiver { color: white; background-color:
+                  lightblue }`, `.automne { background-color: orange }` etc...
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <ul class="custom-list">
+            <li>
+              La <span class="c-attr">class=""</span> s'utilise plusieurs fois,
+              de manière infinie (ex: Plusieurs "membres du club"). En CSS, elle
+              commence par un point <span class="c-attr">.</span>
+            </li>
+            <li>
+              L'<span class="c-attr">id=""</span> est strictement réservé à UN
+              SEUL élément par page (Le Logo, le Menu, le Pied-de-page...). En
+              CSS, il commence par un dièse <span class="c-attr">#</span>.
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>Architecture MVC de Ciblage précis au Pixel.</li>
+              <li>
+                Notion profonde du "DRY" (Don't Repeat Yourself) via les Classes
+                CSS globales ("btn", "card").
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

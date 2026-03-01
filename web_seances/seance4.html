@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 4 – Le Modèle de Boîte</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        Le Modèle de Boîte (Box-Model)
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 4 • Durée : 1h30
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">📦</div>
+          <h2>Objectifs pédagogiques</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>Comprendre que TOUT élément HTML est un bloc rectangulaire.</li>
+            <li>Utiliser les Bordures (Border) pour délimiter les éléments.</li>
+          </ul>
+          <ul class="custom-list">
+            <li>Créer de l'espace interne de respiration avec le `padding`.</li>
+            <li>
+              Repousser les autres éléments par l'extérieur avec le `margin`.
+            </li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. Le monde "Lego" Carré</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Constat :</strong> Même si un texte ou une image a l'air
+                rond, l'ordinateur calcule toujours une surface rectangulaire
+                infinie autour de chaque lettre.
+              </p>
+              <p>
+                Pour le prouver aux élèves, nous allons ajouter un contour rouge
+                solide à TOUS les éléments (<code
+                  >* { border: 1px solid red; }</code
+                >). C'est le choc visuel garantît !
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Border (La Clôture) & Padding (Le Ventre)</h3>
+              <span class="badge">25 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>Concept N°1 : L'Intérieur.</strong>
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>
+                  <code>border: 5px solid blue;</code> On fait apparaitre les
+                  murs de la maison !
+                </li>
+                <li>
+                  <code>padding: 20px;</code> Le texte va s'éloigner des murs !
+                  Le bloc d'enveloppe grandit au passage. Plus il y a de
+                  padding, plus la maison est vaste à l'intérieur !
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. Margin (La Distance aux Voisins)</h3>
+              <span class="badge">20 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Une fois qu'on a un gros morceau de texte avec une belle bordure
+                et un padding moëlleux ... Il reste "collé" au paragraphe
+                précédent. C'est gênant.
+              </p>
+              <div class="code-block" style="margin-top: 10px">
+                <span class="c-tag">img</span> {<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-prop">margin-top</span>:
+                <span class="c-val">50px</span>;
+                <span style="color: #6a9955; font-style: italic"
+                  >/* Repousse les éléments au-dessus d'elle d'une force de 50
+                  pixels ! */</span
+                ><br />
+                }
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Défi "La belle carte"</h3>
+              <span class="badge">30 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Consignes :</strong> Créons le design d'une carte (Comme
+                celles avec l'icône de temps en haut de cette page !!)
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>
+                  Isoler un paragraphe et l'entourer d'une nouvelle balise
+                  générique `&lt;div&gt;` ... `&lt;/div&gt;`.
+                </li>
+                <li>
+                  Dans le CSS, cibler div et lui donner un `background-color`
+                  clair.
+                </li>
+                <li>Ajouter du `padding: 20px` pour l'aérer.</li>
+                <li>
+                  Ajouter `margin: 30px` pour ne pas coller les bords de
+                  l'écran.
+                </li>
+                <li>
+                  <strong>Bonus Pro :</strong>
+                  <code>border-radius: 10px;</code> pour des coins ronds
+                  modernes.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <ul class="custom-list">
+            <li>
+              La <strong>Div</strong>ision (<span class="c-tag">div</span>) est
+              une boite presque vide par défaut, parfaite pour regrouper
+              d'autres éléments.
+            </li>
+            <li>
+              <span class="c-prop">Padding</span> = Espace intérieur de
+              l'élément.
+            </li>
+            <li>
+              <span class="c-prop">Margin</span> = Force extérieure pour
+              repousser ses voisins.
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>Maîtrise du Box-Model fondamental au Web complet.</li>
+              <li>
+                Création d'espaces blancs ("White space") majeurs dans l'UX/UI
+                Design moderne.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

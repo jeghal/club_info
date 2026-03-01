@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 6 – Les Variables</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        Les Variables (Stockage de l'information)
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 6 • Durée : 1h30
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">🎯</div>
+          <h2>Objectifs pédagogiques</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>Visualiser le concept de "boîte" ou "tiroir" en mémoire</li>
+            <li>
+              Créer une variable "Score" et afficher la valeur sur l'écran
+            </li>
+          </ul>
+          <ul class="custom-list">
+            <li>
+              Initialiser systématiquement les variables au lancement (Mettre à
+              0)
+            </li>
+            <li>Incrémenter la valeur (Ajouter 1 à...)</li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. Introduction : L'ordinateur qui s'en souvient</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Allégorie :</strong> Comparer la mémoire de l'ordinateur
+                à une boîte ou un tiroir sur lequel on colle une étiquette
+                ("Score", "Vie", "Prénom").
+              </p>
+              <p>Découverte de la catégorie "Variables" (Orange sombre).</p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>Bouton : "Créer une variable". Mettre le nom "Score".</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Activité : Le jeu de clic (Clicker)</h3>
+              <span class="badge">30 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>Objectif :</strong> Un ballon apparaît, le joueur
+                doit cliquer dessus pour gagner des points.
+              </p>
+
+              <p><strong>Script pour le Sprite du Ballon :</strong></p>
+              <div class="code-block">
+                <span class="event">Quand 🚩 est cliqué</span><br />
+                <span
+                  class="looks"
+                  style="color: #ff8c1a; border-radius: 4px; padding: 2px"
+                  >Mettre [Score] à</span
+                >
+                <span class="value">0</span><br /><br />
+
+                <span class="event">Quand ce sprite est cliqué</span><br />
+                <span class="looks" style="color: #ff8c1a"
+                  >Ajouter à [Score] la valeur</span
+                >
+                <span class="value">1</span><br />
+                <span class="looks" style="color: #cf63cf"
+                  >Jouer le son [Pop] jusqu'au bout</span
+                ><br />
+                <span class="motion">Aller à une position aléatoire</span>
+              </div>
+
+              <div
+                class="callout"
+                style="
+                  border-color: #ff8c1a;
+                  background: rgba(255, 140, 26, 0.08);
+                  color: #c0392b;
+                "
+              >
+                <span class="emoji">⚠️</span>
+                <div>
+                  <strong>Le piège de l'initialisation :</strong><br />
+                  Si on oublie "Mettre Score à 0" sous le drapeau vert, le score
+                  continuera de monter pour toujours, même en relançant le jeu
+                  (C'est de la triche !).
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. Pimenter le jeu (Chronomètre)</h3>
+              <span class="badge">35 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Niveau 2 :</strong> Créer du challenge. Le joueur a 30
+                secondes pour faire le meilleur score possible.
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>Créer une deuxième variable : "Temps".</li>
+              </ul>
+
+              <div class="code-block" style="margin-top: 10px">
+                <span class="event">Quand 🚩 est cliqué</span><br />
+                <span class="looks" style="color: #ff8c1a"
+                  >Mettre [Temps] à</span
+                >
+                <span class="value">30</span><br />
+                <span class="event"
+                  >Répéter jusqu'à ce que &lt; [Temps] = 0 &gt;</span
+                >
+                <div style="padding-left: 20px">
+                  <span class="event">Attendre</span>
+                  <span class="value">1</span>
+                  <span class="event">secondes</span><br />
+                  <span class="looks" style="color: #ff8c1a"
+                    >Ajouter à [Temps] la valeur</span
+                  >
+                  <span class="value">-1</span>
+                </div>
+                <span class="event">Stop Tout</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Clôture de séance et tests</h3>
+              <span class="badge">10 min</span>
+            </div>
+            <div class="step-content">
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>
+                  Tourner dans la classe. "Quel est ton meilleur score en 30
+                  secondes ?"
+                </li>
+                <li>
+                  Ajouter des variantes : faire bouger le ballon en continu avec
+                  une boucle.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <ul class="custom-list">
+            <li>
+              Une <strong>variable</strong> est une mémoire de l'ordinateur qui
+              stocke un nom (ex: Score) et une valeur (ex: 15).
+            </li>
+            <li>
+              Il faut toujours l'<strong>initialiser</strong> (Mettre à Zéro)
+              quand un jeu commence.
+            </li>
+            <li>
+              On peut utiliser les variables pour créer des chronomètres, des
+              vies, ou des niveaux.
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>Abstraction (stockage temporaire de données)</li>
+              <li>Boucle conditionnelle (répéter jusqu'à...)</li>
+              <li>Création d'enjeux d'un jeu (Challenge)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+      <script src="script.js"></script>
+</body>
+</html>

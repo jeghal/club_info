@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance 6 – Graphismes avec Turtle</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="print-btn"
+      onclick="window.print()"
+      title="Imprimer la fiche pédagogique"
+    >
+      🖨️
+    </button>
+
+    <header class="hero">
+      <h1 class="fade-in" style="animation-delay: 0.1s">
+        Graphisme avec Turtle
+      </h1>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Séance 6 • Durée : 1h30
+      </p>
+    </header>
+
+    <div class="container">
+      <main class="card fade-in" style="animation-delay: 0.3s">
+        <div class="card-header">
+          <div class="icon">🐢</div>
+          <h2>Objectifs pédagogiques</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="custom-list">
+            <li>
+              Quitter la pure console textuelle pour aborder le dessin génératif
+            </li>
+            <li>
+              Utiliser et comprendre "l'importation" de modules externes
+              `import`
+            </li>
+          </ul>
+          <ul class="custom-list">
+            <li>
+              Commander un objet avec des coordonnées géométriques (comme la
+              Séance 2 Scratch)
+            </li>
+            <li>Marier les boucles `for` et les mathématiques pour dessiner</li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="card fade-in" style="animation-delay: 0.4s">
+        <div class="card-header">
+          <div class="icon">🕒</div>
+          <h2>Déroulement de la séance</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>1. Invoquer la Tortue (Librairie)</h3>
+              <span class="badge">15 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Python de base ne gère pas les dessins. Pour le faire, on doit
+                lui dire d'aller "importer" un livre de règles depuis sa grosse
+                bibliothèque : c'est le module `turtle`.
+              </p>
+              <div class="python-code">
+                <span class="py-keyword">import</span> turtle
+                <span class="py-comment"
+                  ># Permet d'ouvrir une fenêtre de dessin !</span
+                ><br /><br />
+                turtle.<span class="py-func">color</span>(<span
+                  class="py-string"
+                  >"red"</span
+                >) <span class="py-comment"># Choisit l'encre rouge</span><br />
+                turtle.<span class="py-func">forward</span>(<span class="py-num"
+                  >100</span
+                >) <span class="py-comment"># Avance de 100 pixels</span><br />
+                turtle.<span class="py-func">left</span>(<span class="py-num"
+                  >90</span
+                >)
+                <span class="py-comment"
+                  ># Tourne de 90 degrès vers la gauche</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>2. Le Carré de la Paresse (Le retour du For)</h3>
+              <span class="badge">25 min</span>
+            </div>
+            <div class="step-content">
+              <p style="font-size: 1.1rem">
+                🎯 <strong>L'objectif :</strong> Faire dessiner un carré parfait
+                sans copier/coller 4 fois le bloc Forward/Left.
+              </p>
+              <ul class="custom-list" style="margin-top: 0.8rem">
+                <li>
+                  Introduire <code>range()</code> qui permet de lister un nombre
+                  sans l'écrire à la main.
+                </li>
+              </ul>
+              <div class="python-code" style="margin-top: 10px">
+                <span class="py-keyword">for</span> i
+                <span class="py-keyword">in</span>
+                <span class="py-func">range</span>(<span class="py-num">4</span
+                >): <span class="py-comment"># Va répéter l'action 4 fois</span
+                ><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;turtle.<span class="py-func"
+                  >forward</span
+                >(<span class="py-num">100</span>)<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;turtle.<span class="py-func">left</span
+                >(<span class="py-num">90</span>)
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>3. Rosaces et Mandalas : L'Art du Code</h3>
+              <span class="badge">25 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                Plutôt qu'un carré, que se passe-t-il si la tortue avance de
+                100, tourne de 123 degrés, avance de 100... et fait ça 100 fois
+                de suite ?
+              </p>
+              <div class="python-code">
+                turtle.<span class="py-func">speed</span>(<span class="py-num"
+                  >0</span
+                >) <span class="py-comment"># Vitesse Max (Lumière)</span><br />
+                <span class="py-keyword">for</span> x
+                <span class="py-keyword">in</span>
+                <span class="py-func">range</span>(<span class="py-num"
+                  >100</span
+                >):<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;turtle.<span class="py-func"
+                  >forward</span
+                >(<span class="py-num">x</span> * <span class="py-num">2</span>)
+                <span class="py-comment"
+                  ># La taille augmente à chaque fois !</span
+                ><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;turtle.<span class="py-func">left</span
+                >(<span class="py-num">91</span>)
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-header">
+              <h3>4. Exploration libre "Le Spirographe"</h3>
+              <span class="badge">25 min</span>
+            </div>
+            <div class="step-content">
+              <p>
+                <strong>Consignes :</strong> Changer les couleurs
+                (turtle.color("blue", "green"...) et s'amuser à modifier la
+                variable des angles de rotation ou des longueurs. Les élèves
+                sont invités à trouver le plus beau motif possible.
+              </p>
+              <p style="font-style: italic; color: #666">
+                On peut introduire `turtle.circle()` pour des ronds parfaits.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer / Trace écrite -->
+      <div class="grid-2 fade-in" style="animation-delay: 0.5s">
+        <div class="small-card">
+          <h4>📝 Trace écrite</h4>
+          <ul class="custom-list">
+            <li>
+              La commande <span class="py-keyword">import</span> appelle une
+              extension (librairie) qui donne de "nouveaux pouvoirs" à Python.
+            </li>
+            <li>
+              <span class="py-func">range(X)</span> permet de générer une suite
+              de "X" numéros virtuels, et est très souvent utilisé pour la
+              boucle `for` afin de répéter un code "X fois".
+            </li>
+          </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 2rem">
+          <div class="small-card" style="height: auto">
+            <h4>🎓 Compétences travaillées</h4>
+            <ul class="custom-list">
+              <li>Initiation aux librairies externes (Dépendances logiciel)</li>
+              <li>Logique spatiale (Coordonnées XY, Angles Degrés)</li>
+              <li>Programmation Créative (Générative Art)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

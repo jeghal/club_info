@@ -1,0 +1,559 @@
+:root {
+  --python-blue: #306998;
+  --python-yellow: #ffd43b;
+  --python-light-blue: #4b8bbe;
+  --bg-color: #f4f7f9;
+  --text-main: #2c3e50;
+  --text-muted: #7f8c8d;
+  --card-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Hero Header */
+.hero {
+  background: linear-gradient(
+    135deg,
+    var(--python-blue) 0%,
+    var(--python-light-blue) 100%
+  );
+  color: white;
+  padding: 4rem 2rem 6rem 2rem;
+  text-align: center;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  box-shadow: 0 10px 30px rgba(48, 105, 152, 0.3);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  opacity: 0.95;
+  background: rgba(255, 255, 255, 0.25);
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Main Container */
+.container {
+  max-width: 1000px;
+  margin: -3rem auto 3rem auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* Card Style */
+.card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #edf2f7;
+  padding-bottom: 1.5rem;
+}
+
+.card-header .icon {
+  font-size: 2rem;
+  margin-right: 20px;
+  background: #f0f4f8;
+  height: 65px;
+  width: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  color: var(--python-yellow);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.card-header h2 {
+  font-size: 1.8rem;
+  color: var(--python-blue);
+  font-weight: 700;
+}
+
+/* Lists */
+ul.custom-list {
+  list-style: none;
+}
+ul.custom-list li {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.1rem;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+ul.custom-list li:hover {
+  color: var(--python-blue);
+  transform: translateX(5px);
+}
+ul.custom-list li::before {
+  content: "🐍";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 1.2rem;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin-top: 1rem;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #e2e8f0, #cbd5e1);
+  border-radius: 4px;
+}
+.timeline-step {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+.timeline-step:last-child {
+  margin-bottom: 0;
+}
+.timeline-step::before {
+  content: "";
+  position: absolute;
+  left: -33px;
+  top: 15px;
+  width: 24px;
+  height: 24px;
+  background: var(--python-yellow);
+  border: 4px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(255, 212, 59, 0.3);
+  z-index: 2;
+  transition: transform 0.3s;
+}
+.timeline-step:hover::before {
+  transform: scale(1.3);
+}
+
+.step-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  background: #f8fafc;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border-left: 5px solid var(--python-blue);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  transition: background 0.3s ease;
+}
+.timeline-step:hover .step-header {
+  background: #f1f5f9;
+}
+
+.step-header h3 {
+  font-size: 1.4rem;
+  color: var(--python-blue);
+  margin: 0;
+  font-weight: 700;
+}
+
+.badge {
+  background: var(--python-light-blue);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(75, 139, 190, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.step-content {
+  padding-left: 1.5rem;
+}
+
+/* Callout Box (Optional usage) */
+.callout {
+  background: rgba(48, 105, 152, 0.08);
+  border-left: 4px solid var(--python-blue);
+  padding: 1.5rem;
+  border-radius: 0 12px 12px 0;
+  margin: 1.5rem 0;
+  font-weight: 600;
+  color: #1e3a8a;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+.callout .emoji {
+  font-size: 1.5rem;
+}
+
+/* Code Block - Styled like the python console but fitting light theme */
+.python-code {
+  background: #1e293b;
+  color: #f8fafc;
+  padding: 2rem 1.5rem 1.5rem;
+  border-radius: 12px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.15rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow-x: auto;
+  line-height: 1.8;
+}
+.python-code::before {
+  content: "🐍 PYTHON SCRIPT";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.py-comment {
+  color: #75715e;
+  font-style: italic;
+}
+.py-keyword {
+  color: #f92672;
+  font-weight: bold;
+}
+.py-func {
+  color: #5cb1d6;
+  font-weight: bold;
+}
+.py-string {
+  color: #e6db74;
+}
+.py-num {
+  color: #ae81ff;
+}
+
+/* Menu Hub Cards */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.menu-card {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: var(--text-main);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.menu-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--python-light-blue);
+  transition: width 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(48, 105, 152, 0.15);
+  border-color: var(--python-blue);
+}
+
+.menu-card:hover::before {
+  width: 8px;
+}
+.menu-card h3 {
+  margin: 0 0 10px 15px;
+  font-size: 1.2rem;
+  color: var(--python-blue);
+}
+.menu-card p {
+  margin: 0 0 0 15px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  flex-grow: 1;
+}
+.menu-card .duration {
+  margin: 15px 0 0 15px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-muted);
+}
+
+/* Grid Layouts */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.small-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  height: 100%;
+}
+.small-card:hover {
+  border-color: var(--python-light-blue);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(48, 105, 152, 0.15);
+}
+.small-card h4 {
+  color: var(--python-blue);
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+}
+
+/* Print Button */
+.print-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: linear-gradient(
+    135deg,
+    var(--python-blue),
+    var(--python-light-blue)
+  );
+  color: white;
+  border: none;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(48, 105, 152, 0.4);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.print-btn:hover {
+  transform: scale(1.15) rotate(10deg);
+  box-shadow: 0 15px 35px rgba(48, 105, 152, 0.6);
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+  .hero {
+    background: none !important;
+    color: black;
+    clip-path: none;
+    box-shadow: none;
+    padding: 1rem 0 2rem 0;
+    border-bottom: 2px solid #ccc;
+  }
+  .hero h1 {
+    text-shadow: none;
+    color: black;
+    font-size: 2.5rem;
+  }
+  .hero p {
+    background: none;
+    color: #555;
+    padding: 0;
+    box-shadow: none;
+  }
+  .container {
+    margin-top: 2rem;
+    box-shadow: none;
+    max-width: 100%;
+    padding: 0;
+  }
+  .card {
+    box-shadow: none;
+    border: none;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    page-break-inside: avoid;
+  }
+  .card:hover,
+  .small-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: #ccc;
+  }
+  .print-btn {
+    display: none;
+  }
+  .badge {
+    border: 1px solid #333;
+    background: white;
+    color: black;
+    box-shadow: none;
+  }
+  .timeline::before {
+    background: #ccc;
+    width: 2px;
+  }
+  .timeline-step::before {
+    border-color: #ccc;
+    background: white;
+    box-shadow: none;
+  }
+  .step-header {
+    border-left-color: #333;
+    background: #f9f9f9;
+    box-shadow: none;
+  }
+  .python-code {
+    background: #f0f0f0 !important;
+    color: black !important;
+    box-shadow: none;
+    border: 1px solid #ccc !important;
+    padding-top: 1.5rem;
+  }
+  .python-code::before {
+    background: #ccc;
+    color: black;
+    border: none;
+  }
+  .py-keyword {
+    color: #0000ff !important;
+  }
+  .py-func {
+    color: #795e26 !important;
+  }
+  .py-string {
+    color: #a31515 !important;
+  }
+  .small-card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+    break-inside: avoid;
+  }
+  ul.custom-list li {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .card {
+    padding: 1.5rem;
+  }
+  .step-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  .timeline-step::before {
+    left: -26px;
+  }
+  .timeline {
+    padding-left: 1.5rem;
+  }
+  .print-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+  }
+}

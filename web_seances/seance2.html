@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Séance 2 – Les Balises Essentielles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()" title="Imprimer la fiche pédagogique">🖨️</button>
+
+    <header class="hero">
+        <h1 class="fade-in" style="animation-delay: 0.1s;">Les Balises Essentielles</h1>
+        <p class="fade-in" style="animation-delay: 0.2s;">Séance 2 • Durée : 1h30</p>
+    </header>
+
+    <div class="container">
+        
+        <main class="card fade-in" style="animation-delay: 0.3s;">
+            <div class="card-header">
+                <div class="icon">🔗</div>
+                <h2>Objectifs pédagogiques</h2>
+            </div>
+            <div class="grid-2">
+                <ul class="custom-list">
+                    <li>Créer des listes à puces (<ul>) et numérotées (<ol>)</li>
+                    <li>Insérer une image sur sa page web avec `<img>`</li>
+                </ul>
+                <ul class="custom-list">
+                    <li>Créer un lien hypertexte interactif `<a>` (La base de l'internet)</li>
+                    <li>Comprendre la notion d'"Attributs" dans une balise (ex: href, src, alt).</li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="card fade-in" style="animation-delay: 0.4s;">
+            <div class="card-header">
+                <div class="icon">🕒</div>
+                <h2>Déroulement de la séance</h2>
+            </div>
+            
+            <div class="timeline">
+                
+                <div class="timeline-step">
+                    <div class="step-header">
+                        <h3>1. Organiser l'information en listes</h3>
+                        <span class="badge">20 min</span>
+                    </div>
+                    <div class="step-content">
+                        <p>Pour lister ses passions, un gros paquet de paragraphes n'est pas optimal. On découvre `ul` (Unordered List) ou `ol` (Ordered) et ses enfants `li` (List Item).</p>
+                        <div class="code-block">
+                            <span class="c-tag">&lt;ul&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-tag">&lt;li&gt;</span><span class="c-str">J'aime les Jeux Vidéos</span><span class="c-tag">&lt;/li&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-tag">&lt;li&gt;</span><span class="c-str">J'aime le Football</span><span class="c-tag">&lt;/li&gt;</span><br>
+                            <span class="c-tag">&lt;/ul&gt;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-header">
+                        <h3>2. Insérer une image (Et sa source)</h3>
+                        <span class="badge">25 min</span>
+                    </div>
+                    <div class="step-content">
+                        <p style="font-size: 1.1rem;">🎯 <strong>La nouveauté :</strong> Une balise peut ne pas avoir de fin ! (Balise Auto-fermante).</p>
+                        <p>Il ne suffit pas de dire "Ceci est une image". Il faut donner l'adresse de cette image à la balise grâce aux <strong>Attributs</strong>.</p>
+                        <div class="code-block" style="margin-top: 10px;">
+                            <span class="c-tag">&lt;img</span> <span class="c-attr">src</span>=<span class="c-str">"chaton.jpg"</span> <span class="c-attr">alt</span>=<span class="c-str">"Un mignon petit chat"</span> <span class="c-tag">/&gt;</span>
+                        </div>
+                        <p style="font-style: italic; color: #666; font-size: 0.9rem;">Explication de `src="..."` (Source) et de l'importance absolue de l'attribut `alt="..."` pour les malvoyants.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-header">
+                        <h3>3. Lier les pages web (Les Liens)</h3>
+                        <span class="badge">25 min</span>
+                    </div>
+                    <div class="step-content">
+                        <p>Sans la balise "Anchor" `<a>`, internet ne serait qu'une seule page isolée. C'est elle qui crée la "toile".</p>
+                        <div class="code-block">
+                            <span class="c-tag">&lt;a</span> <span class="c-attr">href</span>=<span class="c-str">"https://google.com"</span><span class="c-tag">&gt;</span><span class="c-str">Cliquez ici pour aller sur Google</span><span class="c-tag">&lt;/a&gt;</span>
+                        </div>
+                        <p>L'attribut `href` pointe vers la destination. Le texte entre les balises est ce qui sera bleu et souligné.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-header">
+                        <h3>4. Défi du jour : "Le Top 3"</h3>
+                        <span class="badge">20 min</span>
+                    </div>
+                    <div class="step-content">
+                        <p><strong>Consignes :</strong> Reprendre la page "présentation" de la Séance 1.</p>
+                        <ul class="custom-list" style="margin-top: 0.8rem;">
+                            <li>Ajouter une liste ordonnée `ol` avec le Top 3 de vos films/livres favoris.</li>
+                            <li>Ajouter une image trouvée sur internet (Récupérer l'URL de l'image).</li>
+                            <li>Ajouter un lien "Vers mon école" qui redirige vers le site de l'établissement.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer / Trace écrite -->
+        <div class="grid-2 fade-in" style="animation-delay: 0.5s;">
+            <div class="small-card">
+                <h4>📝 Trace écrite</h4>
+                <ul class="custom-list">
+                    <li>Un <strong>Attribut</strong> (comme <span class="c-attr">src=""</span> ou <span class="c-attr">href=""</span>) donne une information supplémentaire capitale à une balise.</li>
+                    <li>La balise image <span class="c-tag">&lt;img /&gt;</span> n'est composée d'aucune tranche de fermeture. Elle est "auto-fermante".</li>
+                </ul>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 2rem;">
+                <div class="small-card" style="height: auto;">
+                    <h4>🎓 Compétences travaillées</h4>
+                    <ul class="custom-list">
+                        <li>Routage de base et chemin absolu/relatif (Attributs HREF/SRC).</li>
+                        <li>Sensibilisation à l'accessibilité Numérique (ALT).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
